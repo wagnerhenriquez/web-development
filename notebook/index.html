@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>The notebook - Issue two out now!</title>
+	<link rel="stylesheet" href="./styles/estilos.css">
+</head>
+<body>
+	
+	<div class="wrapper">
+		<div class="bg"></div>
+
+		<!-- navbar -->
+	<nav class="nav">
+		<div class="title">Notebook</div>
+			<div class="categories">
+				<ul>
+					<li><a href="#">man</a></li>
+					<li><a href="#">women</a></li>
+				</ul>
+			</div>
+
+		<!-- <div class="menu">
+			<ion-icon name="ios-menu"></ion-icon>
+		</div>
+		<div class="search">
+			<ion-icon name="ios-search"></ion-icon>
+		</div> -->
+	</nav>
+
+	<!-- menu hamburguesa -->
+	<div class="menu-wrap">
+		<input type="checkbox" class="toggler">
+		<div class="hamburger"><div></div></div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul>
+						<li><a href="./about.html">Biographic</a></li>
+						<li><a href="#">Music</a></li>
+						<li><a href="#">Social Media</a></li>
+						<li><a href="#">Worldwide Tour</a></li>
+						<li><a href="#" id="contact">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- fin menu hamburguesa -->
+	<!-- redes sociales -->
+
+	<div class="redes">
+		<ul>
+			<li><a href="#">Facebook</a></li>
+			<li><a href="#">Instagram</a></li>
+			<li><a href="#">Twitter</a></li>
+		</ul>
+	</div>
+
+	<!-- texto titulo -->
+		<div class="titulo">
+			<h1>The Great Escape</h1>
+			<p>issue two out now</p>
+		</div>
+		<div class="contact" id="contact2">
+			<div class="close" id="close"><i class="fas fa-times"></i></div>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" placeholder="Name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" placeholder="Email" required>
+				<label for="option">Subject:</label>
+				<select name="option" id="option">
+					<option value="1" requiered>Booking</option>
+					<option value="2">Interview</option>
+					<option value="3">Join our crazy team</option>
+				</select>
+				<label for="message">Message:</label>
+				<textarea name="subjet" id="subjet" cols="10" rows="10" placeholder="Enter your message"
+					required></textarea><br>
+				<input type="submit" id="submit" value="send">
+			</form>
+		</div>
+		<!-- mini texto inferior -->
+
+		<div class="mini-texto">
+			<ul>
+				<li>Volumen 01</li>
+				<li>Volumen 02</li>
+			</ul>
+			<p>A fashion insight into leading summer styles, travel destinations to may never of thought of, a beginners guide to S&M and much much mor</p>
+		</div>
+
+	<!-- scrolldown -->
+	<div class="scrolldown">welcome</div>
+		
+	<!-- nav playlist -->
+
+	<div class="playlist">
+		<div class="next">up next</div>
+		<div class="nav-playlist">
+			<ul>
+				<li class="arriba"><ion-icon name="ios-arrow-up"></ion-icon></li>
+				<li class="abajo"><ion-icon name="ios-arrow-down"></ion-icon></li>
+			</ul>
+			<div class="imagen-playlist"></div>
+		</div>
+	</div>
+
+	<!-- fondo con imagenes -->
+	
+	<div class="fondo-img01">
+		<div class="img01"></div>
+		<div class="efecto01"></div>
+		</div>
+		<div class="fondo-img02">
+		<div class="img02"></div>
+		<div class="efecto02"></div>
+	</div>
+
+
+</div>
+
+
+
+
+
+<script>
+	const contacto = document.getElementById('contact')
+
+	contact.addEventListener('click', () => {
+		contact2.style.display = "initial"
+	})
+
+	const cerrar = document.getElementById('close')
+
+	cerrar.addEventListener('click', () => {
+		contact2.style.display = "none"
+	})
+</script>
+<!-- icons -->
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+	integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>	
+	<script src="https://kit.fontawesome.com/bb499b2907.js" crossorigin="anonymous"></script>
+</body>
+</html>

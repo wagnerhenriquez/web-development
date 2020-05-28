@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+body{
+	font-family: 'Roboto', 'Poppins', sans-serif;
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+    /* overflow: hidden; */
+	background-color: #8C6C79;
+	width: 80%;
+    margin: 0 auto;
+}
+.nav{
+	display: flex; /*poner elementos uno al lado del otro*/
+	justify-content: space-between;
+	padding:0 0px;
+	position: relative;
+	top: 45px;
+	align-items: center; /*centrar elementos dentro del bloque*/
+}
+.nav .title{
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+}
+.nav .categories{
+	margin-right: auto; /*margen automatico a la derecha*/
+
+}
+.nav .categories ul li{
+	display: inline-block; /*poner elementos li en linea*/
+    position: relative; /*posicion relativa para ubicarlos*/
+    left: 100%;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 0 5px;
+}
+.nav .menu{
+	margin-right: 50px; /*separar elemento menu del search*/
+	padding: 10px;
+}
+.nav .search{
+	margin: 0;
+}
+/*menu hamburguesa*/
+.menu-wrap{
+	position: fixed;
+	top: 30px;
+	right: 100px;
+	z-index: 5;
+	/*display: none;*/
+}
+.menu-wrap .toggler{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 6;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+}
+.menu-wrap .hamburger{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	width: 60px;
+	height: 60px;
+	background: transparent; /*debe ir transparent*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu-wrap .hamburger > div{
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .4s ease;
+}
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+	content: '';
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	top: -10px;
+}
+.menu-wrap .hamburger > div:after{
+	top: 10px;
+}
+.menu-wrap .toggler:checked + .hamburger > div{
+	transform: rotate(135deg);
+}
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after{
+	transform: rotate(90deg);
+	top: 0;
+}
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+	transform: rotate(225deg);
+}
+.menu-wrap .toggler:checked ~ .menu{
+	visibility: visible;
+}
+.menu-wrap .toggler:checked ~ .menu > div {
+	transform: scale(1);
+	transition-duration: 0.75s;
+}
+.menu-wrap .toggler:checked ~ .menu > div > div{
+	opacity: 1;
+	transition: opacity 0.4s ease;
+}
+.menu-wrap .menu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu-wrap .menu > div{
+	background: rgba(150, 97, 255, 0.97);
+	width: 200vh;
+	height: 200vh;
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0);
+	transition: all 0.4s ease;
+	text-transform: uppercase;
+}
+.menu-wrap .menu > div > div{
+	max-width: 90vh;
+	max-height: 100vh;
+	opacity: 0;
+	transition: opacity 0.4s ease;	
+}
+.menu-wrap .menu > div > div ul > li{
+	list-style: none;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 1rem;
+	text-align: center;
+}
+.menu-wrap .menu > div > div ul > li > a{
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.4s ease;
+}
+.menu-wrap .menu > div > div ul > li > a:hover{
+	text-decoration: underline;
+}
+/*fin menu hamburguesa*/
+.about-us{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 100px;
+}
+.fotos-1 {
+    width: 400px;
+    padding: 30px;
+}
+.fotos-1 img{
+    width: 400px;
+    height: 600px;
+    position: relative;
+	top: 30px;
+	transition: .5s ease;
+}
+.fotos-1 img:nth-child(2){
+	width: 250px;
+	height: 400px;
+	position: relative;
+	top: -100px;
+	left: -100px;
+}
+.fotos-1 img:hover{
+	top: 0;
+}
+.fotos-1 img:nth-child(2):hover{
+	top: -200px;
+}
+.texto-about{
+	font-size: 1rem;
+	width: 430px;
+}
+.titulo-about{
+	font-size: 3rem;
+	position: relative;
+}
+.p1{
+    position: relative;
+    top: 10px;
+}
+.p2{
+    position: relative;
+    top: 20px;
+    font-size: 1.4rem;
+}
+.titulo-h1{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: -100px;
+	font-size: 2rem;
+}
+.story{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.pp1-div, .pp2-div{
+	padding: 25px;
+	position: relative;
+	top: -50px;
+}
+.pp1, .pp2{
+	text-align: left;
+}
+.pp1:nth-child(2), .pp2:nth-child(2){
+	position: relative;
+	top: 20px;
+}
+.about-us-3{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.foto-bio{
+	width: 800px;
+	height: 800px;
+	overflow: hidden;
+}
+.foto-bio img{
+	object-fit: cover;
+	padding: 20px;
+	width: 100%;
+	height: 100%;
+	transition: .5s ease;
+}
+.foto-bio img:hover{
+	transform: scale(1.5);
+}
+.pp4{
+	position: relative;
+	top: 40px;
+}
+.social{
+	display: flex;
+	justify-content: space-around;
+}
+.fab{
+	font-size: 4rem;
+	position: relative;
+	top: -100px;
+	transition: .5s ease;
+	display: none;
+	cursor: pointer;
+}
+footer{
+	padding: 40px;
+}
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact{
+	width: 70%;
+	height: 70%;
+	background-color: #9661FF;
+	border: 1px solid ;
+	padding: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10000;
+	display: none;
+	
+}
+.close{
+	font-size: 3rem;
+	text-align: right;
+	color: #fff;
+}
+form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+input, select{
+	width: 100%;
+	height: 50px;
+	background: rgba(196, 175, 239, 0.15);
+	color: #fff;
+	border: none;
+	padding: 5px;
+}
+select{
+	background-color: #9d6dfd !important;
+	
+}
+textarea{
+	width: 100%;
+	padding: 5px;
+	background: rgba(196, 175, 239, 0.15);
+	color: #fff;
+	border: none;
+}
+input::placeholder, textarea::placeholder{
+	color: #fff;
+}
+label{
+	padding: 5px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+    <title>Biographic - The Notebook</title>
+</head>
+<body>
+    <div class="wrapper">
+    <!-- menu hamburguesa -->
+    <nav class="nav">
+        <div class="title">Notebook</div>
+        </nav>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Worldwide Tour</a></li>
+                        <li><a href="#" id="contact">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin menu hamburguesa -->
+    <section class="about-us">
+        <div class="fotos-1">
+            <img src="img/chica1.jpg" alt="foto-1">
+            <img src="img/chica2.jpg" alt="foto-2">
+           
+        </div>
+        <div class="texto-about">
+            <h2 class="titulo-about">About The Notebook</h2>
+            <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dicta modi aliquam, fuga quisquam, tenetur sapiente officiis placeat nisi veniam voluptate possimus harum quaerat sit labore deserunt repudiandae vitae iste.</p>
+            <p class="p2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In corrupti amet nulla illum odit a!</p>
+        </div>
+    </section>
+    <section class="about-us-2">
+        <div class="titulo">
+            <h1 class="titulo-h1">The Beginning</h1>
+        </div>
+        <div class="story">
+            <div class="pp1-div">
+            <p class="pp1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est corrupti consequuntur repudiandae. Iste, reiciendis
+            ducimus omnis deserunt nulla qui exercitationem maxime pariatur consequatur ex animi quo expedita, iusto et veritatis,
+            dignissimos nihil similique ipsum aliquid! Delectus perspiciatis similique itaque fugiat?</p>
+            <p class="pp1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium saepe eligendi sapiente! Praesentium cupiditate, minus quaerat facilis cum amet maxime?</p>
+            </div>
+            <div class="pp2-div">
+            <p class="pp2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est corrupti consequuntur repudiandae. Iste, reiciendis ducimus omnis deserunt nulla qui exercitationem maxime pariatur consequatur ex animi quo expedita, iusto et veritatis, dignissimos nihil similique ipsum aliquid! Delectus perspiciatis similique itaque fugiat?</p>
+            <p class="pp2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo nostrum reprehenderit error nemo laborum dolorem blanditiis vero nam numquam itaque!</p>
+            </div>
+    </div>
+    </section>
+    <section class="about-us-3">
+        <div class="foto-bio">
+            <img src="img/chica3.jpg" alt="chica3">
+        </div>
+        <div class="foto-bio">
+            <img src="img/chica4.jpg" alt="chica3">
+        </div>
+        <div class="foto-bio">
+            <img src="img/chica5.jpg" alt="chica3">
+        </div>
+    </section>
+    <div class="social">
+            <div class="fb"><i class="fab fa-facebook-square"></i></div>
+            <div class="ig">
+            <i class="fab fa-instagram"></i>
+            </div>
+            <div class="tw">
+            <i class="fab fa-twitter"></i>
+            </div>
+    </div>
+    <hr>
+    <section class="about-us-4">
+    </section>
+    <footer>
+        <div class="footer">
+            <p>Designed by <a href="#">Wagner H.</a></p>
+            
+        </div>
+    </footer>
+    <div class="contact" id="contact2">
+        <div class="close" id="close"><i class="fas fa-times"></i></div>
+        <form>
+               <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email" required>
+                <label for="option">Subject:</label>
+                <select name="option" id="option">
+                    <option value="1" requiered>Booking</option>
+                    <option value="2">Interview</option>
+                    <option value="3">Join our crazy team</option>
+                </select>
+                <label for="message">Message:</label>
+                <textarea name="subjet" id="subjet" cols="10" rows="10" placeholder="Enter your message" required></textarea><br>
+                <input type="submit" id="submit" value="send">
+        </form>
+    </div>
+</div>
+
+<script>
+    const contacto = document.getElementById('contact')
+
+    contact.addEventListener('click', () => {
+        contact2.style.display = "initial"
+    })
+
+    const cerrar = document.getElementById('close')
+
+        cerrar.addEventListener('click', () => {
+            contact2.style.display = "none"
+        })
+</script>
+<script src="https://kit.fontawesome.com/bb499b2907.js" crossorigin="anonymous"></script>
+</body>
+</html>

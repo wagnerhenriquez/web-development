@@ -1,0 +1,1005 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+	font-family: 'Poppins';
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.wrapper{
+	background: #8C6C79;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 2;
+	animation: abreycierra 1.2s linear;
+
+}
+
+.nav{
+	display: flex; /*poner elementos uno al lado del otro*/
+	justify-content: space-between;
+	padding:0 50px;
+	height: 80px;
+	align-items: center; /*centrar elementos dentro del bloque*/
+}
+.nav .title{
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+}
+.nav .categories{
+	margin-right: auto; /*margen automatico a la derecha*/
+
+}
+.nav .categories ul li{
+	display: inline-block; /*poner elementos li en linea*/
+    position: relative; /*posicion relativa para ubicarlos*/
+    left: 100%;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 0 5px;
+}
+.nav .menu{
+	margin-right: 50px; /*separar elemento menu del search*/
+	padding: 10px;
+}
+.nav .search{
+	margin: 0;
+}
+/*menu hamburguesa*/
+.menu-wrap{
+	position: fixed;
+	top: 30px;
+	right: 100px;
+	z-index: 5;
+	/*display: none;*/
+}
+.menu-wrap .toggler{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 6;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+}
+.menu-wrap .hamburger{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	width: 60px;
+	height: 60px;
+	background: transparent; /*debe ir transparent*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu-wrap .hamburger > div{
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .4s ease;
+}
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+	content: '';
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	top: -10px;
+}
+.menu-wrap .hamburger > div:after{
+	top: 10px;
+}
+.menu-wrap .toggler:checked + .hamburger > div{
+	transform: rotate(135deg);
+}
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after{
+	transform: rotate(90deg);
+	top: 0;
+}
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+	transform: rotate(225deg);
+}
+.menu-wrap .toggler:checked ~ .menu{
+	visibility: visible;
+}
+.menu-wrap .toggler:checked ~ .menu > div {
+	transform: scale(1);
+	transition-duration: 0.75s;
+}
+.menu-wrap .toggler:checked ~ .menu > div > div{
+	opacity: 1;
+	transition: opacity 0.4s ease;
+}
+.menu-wrap .menu{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu-wrap .menu > div{
+	background: rgba(150, 97, 255, 0.97);
+	width: 200vh;
+	height: 200vh;
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0);
+	transition: all 0.4s ease;
+	text-transform: uppercase;
+}
+.menu-wrap .menu > div > div{
+	max-width: 90vh;
+	max-height: 100vh;
+	opacity: 0;
+	transition: opacity 0.4s ease;	
+}
+.menu-wrap .menu > div > div ul > li{
+	list-style: none;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 1rem;
+	text-align: center;
+}
+.menu-wrap .menu > div > div ul > li > a{
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.4s ease;
+}
+.menu-wrap .menu > div > div ul > li > a:hover{
+	text-decoration: underline;
+}
+/*fin menu hamburguesa*/
+.contact{
+	width: 70%;
+	height: 70%;
+	background-color: #9661FF;
+	border: 1px solid ;
+	padding: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10000;
+	display: none;
+	
+}
+.close{
+	font-size: 3rem;
+	text-align: right;
+	color: #fff;
+}
+form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+input, select{
+	width: 100%;
+	height: 50px;
+	background: rgba(196, 175, 239, 0.15);
+	color: #fff;
+	border: none;
+	padding: 5px;
+}
+select{
+	background-color: #9d6dfd !important;
+	
+}
+textarea{
+	width: 100%;
+	padding: 5px;
+	background: rgba(196, 175, 239, 0.15);
+	color: #fff;
+	border: none;
+}
+input::placeholder, textarea::placeholder{
+	color: #fff;
+}
+label{
+	padding: 5px;
+}
+.titulo{
+	position: absolute; /*posicion absoluta para jugar con su ubicacion*/
+	top: 40%;
+	right: 30%;
+}
+.titulo h1{
+	font-size: 7rem;
+	font-weight: 300;
+	opacity: 0;
+	animation: titulo 1.5s linear forwards;
+}
+@keyframes titulo{
+	0%{
+		margin-bottom: 100px;
+		opacity: 0;
+	}
+	50%{
+		margin-bottom:50px;
+		opacity: .5; 
+	}
+	100%{
+		margin-bottom: 0;
+		opacity: 1;
+	}
+}
+.titulo p{
+	text-transform: uppercase;
+	font-size: 3rem;
+	font-weight: lighter;
+}
+.mini-texto{
+	position: absolute;
+	display: flex; /*display flex para poner los elementos uno  al lado del otro ya que estan en el mismo div*/
+	left: 200px;
+	bottom: 70px;
+}
+.mini-texto ul{
+	margin-right: 50px;
+}
+.mini-texto ul li{
+	font-size: 10px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 10px;
+}
+.mini-texto p{
+	width: 250px;
+	font-size: 10px;
+	text-align: justify;
+}
+	
+.redes{
+	position: absolute; /*posicion absoluta para jugar con la ubicacion dentro del width*/
+	top: 350px; 
+	right: -90px;
+	transform: rotate(-90deg); /*rotarlo -90 grados para ubicarlo verticalmente en el width*/
+}
+.redes ul li{
+	display: inline-block; /*mostar los elementos en linea para poner verlos verticalmente dentro de la pantalla/width*/
+	padding: 10px;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+.scrolldown{
+	position: absolute; /*posicion absoluta, mismo caso que redes*/
+	bottom: 116px;
+	left: -60px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 4px;
+	transform: rotate(-90deg); /*rotarlo -90 grados  para visualizarlo verticalmente, mismo caso redes*/
+}
+.scrolldown::before{
+	content: '';
+	border:1px solid #fff; /*before para mostrar una linea estetica antes del div*/
+	width: 100px; 
+	margin: 0 20px 0 0;
+	transform: translateY(-3px);
+	display: inline-block;
+	opacity: .5;
+}
+.playlist{
+	position: absolute; /*posicion absoluta para jugar con su ubicacion, no seguro si es la mejor solucion*/
+	right: 50px;
+	bottom: 30px;
+	opacity: 0;
+	animation: reproductor 1.5s linear forwards;
+	
+}
+@keyframes reproductor{
+	0%{
+		opacity: 0;
+		margin-bottom: 15px;
+	}
+	25%{
+		opacity: .1;
+		margin-bottom: 10px;
+	}
+	50%{
+		opacity: .3;
+		margin-bottom: 5px;
+	}
+	75%{
+		opacity: .7;
+		margin-bottom: 2px;
+	}
+	100%{
+		opacity: 1;
+		margin-bottom: 0;
+	}
+}
+.playlist .next{
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+.playlist .next::after{
+	content: ''; /*after para colocar una linea estetica despues del div*/
+	border:1px solid #fff;
+	width: 100px;
+	margin: 0 0 0 20px;
+	transform: translateY(-3px);
+	display: inline-block;
+	opacity: .5;
+}
+.nav-playlist{
+	display: flex; /*display flex para colocar el elemento de las flechas al lado de la imagen*/
+	animation: reproductor 1.5s linear forwards;
+}
+.nav-playlist ul{
+	background: #fff;
+	padding: 10px;
+	display: flex; /*para ordenarlo en una sola fila*/
+	flex-direction: column; /*flex direction: column para hacerlo una columna, es decir, un objeto debajo del otro*/
+	justify-content: space-between; /*y justificar contenido : space between para ordenar en este caso las flechas de un extremo al otro*/
+}
+.abajo{
+	 color: #000;
+	 animation: flechaarriba 1s linear forwards infinite;
+}
+.arriba{
+	color: #000;
+ 	 animation: flechaabajo 1s linear forwards infinite;
+}
+@keyframes flechaabajo{
+	0%{ 
+	margin-top: 0;
+	 }
+	 25%{
+	 	margin-top: 1px;
+	 }
+	 50%{
+	 	margin-top: 2px;
+	 }
+	 75%{margin-top: 1px;
+	 }
+	 100%{
+	 	margin-top: 0px;
+	 }
+}
+@keyframes flechaarriba{
+	0%{ 
+	margin-bottom: 0;
+	 }
+	 25%{
+	 	margin-bottom: 1px;
+	 }
+	 50%{
+	 	margin-bottom: 2px;
+	 }
+	 75%{margin-bottom: 1px;
+	 }
+	 100%{
+	 	margin-bottom: 0px;
+	 }
+}
+.imagen-playlist{
+	background: url(../img/bottomnav-img.jpg);
+	width: 300px;
+	height: 200px;
+	background-size: cover;
+	background-position: 50%;
+}
+.img01{
+	background: url(../img/image01.jpg);
+	background-size: cover;
+	background-position: 50%;
+	width: 350px;
+	height: 500px;
+	position: absolute;
+	left: 200px;
+	bottom: 300px;
+	z-index: -2;
+	opacity: 1;
+	animation: opacidad-imgdos 1.9s linear;
+
+
+}
+@keyframes opacidad-imguno{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.efecto01{
+	background: #a27d8c;
+	position: absolute;
+  	bottom: 300px;
+  	left: 0;
+  	width: 0;
+  	height: 500px;
+	z-index: -1;
+	animation: efectouno 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+@keyframes efectouno{
+	0%{
+		left: 200px;
+		width: 0;
+	}
+	50%{
+		left: 200px;
+		width: 350px;
+	}
+	100%{
+		left: 200px;
+		width: 0;
+		
+
+	}
+}
+.img02{
+	background: url(../img/image02.png);
+	background-size: cover;
+	width: 800px;
+	height: 100vh;
+	position: absolute;
+	left: 650px;
+	top: 0;
+	z-index: -1;
+	opacity: 1;
+	animation: opacidad-imgdos 2.1s linear;
+}
+@keyframes opacidad-imgdos{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.efecto02{
+	background: #5d464f;
+	position: absolute;
+  	top: 0;
+  	left: 650px;
+  	width: 0;
+  	height: 100%;;
+	z-index: -1;
+	animation: efectodos 2.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+	animation-delay: .2s;
+}
+@keyframes efectodos{
+	0%{
+		right: 650px;
+		width: 0;
+	}
+	50%{
+		right: 650px;
+		width: 800px;
+	}
+	100%{
+		right: 650px;
+		width: 0;
+	}
+}
+@media all and (max-width: 1393px){
+	.titulo h1{
+		font-size: 5rem;
+	}
+	.img01{
+		width: 250px;
+		height: 400px;
+		left: 66px;
+
+	}
+	.efecto01{
+		left: 0;
+		height: 400px;
+	}
+	@keyframes efectouno{
+	0%{
+		left: 66px;
+		width: 0;
+	}
+	50%{
+		left: 66px;
+		width: 250px;
+	}
+	100%{
+		left: 66px;
+		width: 0;
+	}
+}
+	.img02{
+		width: 580px;
+		left: 460px;
+	}
+	.efectodos{
+		left: 460px;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 460px;
+		width: 0;
+	}
+	50%{
+		left: 460px;
+		width: 800px;
+	}
+	100%{
+		left: 460px;
+		width: 0;
+	}
+}
+}
+@media all and (max-width: 1100px){
+	.img02{
+		width: 580px;
+		left: 400px;
+	}
+	.efectodos{
+		left: 400px;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 400px;
+		width: 0;
+	}
+	50%{
+		left: 400px;
+		width: 580px;
+	}
+	100%{
+		left: 400px;
+		width: 0;
+	}
+}
+}
+@media all and (max-width: 1024px){
+	.menu, .search{
+		font-size: 30px;
+	}
+	.titulo h1{
+		font-size: 4.5rem;
+	}
+	.titulo p{
+		font-size: 2.5rem;
+	}
+	.img01{
+		width: 250px;
+		height: 400px;
+		left: 66px;
+
+	}
+	.efecto01{
+		left: 0;
+		height: 400px;
+	}
+	@keyframes efectouno{
+	0%{
+		left: 66px;
+		width: 0;
+	}
+	50%{
+		left: 66px;
+		width: 250px;
+	}
+	100%{
+		left: 66px;
+		width: 0;
+	}
+}
+	.img02{
+		width: 580px;
+		left: 360px;
+	}
+	.efectodos{
+		left: 360px;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 360px;
+		width: 0;
+	}
+	50%{
+		left: 360px;
+		width: 580px;
+	}
+	100%{
+		left: 360px;
+		width: 0;
+	}
+}
+}
+@media all and (max-width: 940px){
+	.titulo h1{
+		font-size: 4rem;
+	}
+	.img01{
+		width: 200px;
+		height: 350px;
+		left: 20px;
+	}
+	.menu-wrap{
+		top: 0;
+		right: 20px;
+	}
+	.efecto01{
+		left: 0;
+		height: 350px;
+	}
+	@keyframes efectouno{
+	0%{
+		left: 20px;
+		width: 0;
+	}
+	50%{
+		left: 20px;
+		width: 250px;
+	}
+	100%{
+		left: 20px;
+		width: 0;
+	}
+}
+.img02{
+		width: 500px;
+		left: 250px;
+		background-size: cover;
+	}
+	.efectodos{
+		left: 250px;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 250px;
+		width: 0;
+	}
+	50%{
+		left: 250px;
+		width: 500px;
+	}
+	100%{
+		left: 250px;
+		width: 0;
+	}
+}
+.mini-texto{
+	display: inherit;
+	left: 120px;
+	bottom: 125px;
+}
+}
+@media all and (max-width: 823px){
+	body{
+		overflow: scroll;
+	}
+	.wrapper{
+		height: 1024px;
+	}
+	.titulo h1{
+		font-size: 3rem;
+	}
+}
+@media all and (max-width: 760px){
+	.img01{
+		display: none;
+	}
+	.efecto01{
+		display: none;
+	}
+	.img02{
+		width: 500px;
+		left: 80px;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 80px;
+		width: 0;
+	}
+	50%{
+		left: 80px;
+		width: 500px;
+	}
+	100%{
+		left: 80px;
+		width: 0;
+	}
+}
+.mini-texto p{
+	width: 200px;
+	font-size: 12px;
+}
+}
+@media all and (max-width: 710px){
+	.titulo h1{
+		font-size: 3rem;
+	}
+	.titulo p{
+		font-size: 1.5rem;
+	}
+	.mini-texto{
+		left: 120px;
+		bottom: 300px;
+		opacity: 0;
+		animation: minitexto 2.8s linear forwards;
+	}
+	@keyframes minitexto{
+		0%{
+			opacity: 0;
+			margin-bottom: 40px;
+		}
+		50%{
+			opacity: 0;
+			margin-bottom: 20px;
+		}
+		100%{
+			opacity: 1;
+			margin-bottom: 5;
+		}
+	}
+	.mini-texto p{
+		width: 300px;
+		font-size: 12px;
+	}
+}
+@media all and (max-width: 620px){
+	.titulo h1{
+		font-size: 2.2rem;
+	}
+}
+@media all and (max-width: 580px){
+
+	.nav .categories{
+		display: none;
+	}
+	.nav .menu{
+		margin-left: 250px;
+	}
+	.nav .search{
+		display: none;
+	}
+	.titulo h1{
+		text-shadow: 0 1px 10px rgb(0, 0 ,0);
+	}
+	.titulo p{
+		text-shadow: 0 1px 10px rgb(0, 0 ,0);
+	}
+	.mini-texto{
+		text-shadow: 0 1px 10px rgb(0, 0 ,0);
+	}
+	.img02{
+		width: 400px;
+		left: 80px;
+		background-position-x:center;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 80px;
+		width: 0;
+	}
+	50%{
+		left: 80px;
+		width: 400px;
+	}
+	100%{
+		left: 80px;
+		width: 0;
+	}
+}
+}
+@media all and (max-width: 480px){
+
+	.img02{
+		width: 350px;
+		left: 60px;
+		background-position-x:center;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 60px;
+		width: 0;
+	}
+	50%{
+		left: 60px;
+		width: 350px;
+	}
+	100%{
+		left: 60px;
+		width: 0;
+	}
+}
+	.titulo{
+		right: 20%;
+	}
+	.mini-texto{
+		left: 95px;
+	}
+	.scrolldown{
+		left: -90px;
+	}
+}
+@media all and (max-width: 450px){
+	.nav .menu{
+		margin-left: 210px;
+	}
+	.redes{
+		display: none;
+	}
+	.titulo h1{
+		font-size: 2rem;
+	}
+	.mini-texto{
+		left: 60px;
+	}
+	.scrolldown{
+		left: -60px;
+		bottom: 97px;
+	}
+	.scrolldown::before{
+		width: 60px;
+	}
+	.playlist{
+		right: 130px;
+	}
+	.imagen-playlist{
+		width: 200px;
+		height: 150px;
+	}
+	.img02{
+		width: 300px;
+		left: 60px;
+		background-position-x:center;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 60px;
+		width: 0;
+	}
+	50%{
+		left: 60px;
+		width: 300px;
+	}
+	100%{
+		left: 60px;
+		width: 0;
+	}
+}
+
+}
+@media all and (max-width: 430px){
+	.scrolldown{
+		left: -70px;
+	}
+}
+@media all and (max-width: 420px){
+
+	.nav .menu{
+		margin-left: 170px;
+	}
+	.titulo{
+		top: 30%;
+	}
+	.playlist{
+		right: 100px;
+	}
+	.img02{
+		width: 275px;
+		left: 45px;
+		background-position-x:center;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 45px;
+		width: 0;
+	}
+	50%{
+		left: 45px;
+		width: 275px;
+	}
+	100%{
+		left: 45px;
+		width: 0;
+	}
+}
+}
+@media all and (max-width: 380px){
+	.nav{
+		padding: 0 20px;
+	}
+	.nav .title{
+		font-size: 14px;
+		letter-spacing: 1px;
+	}
+	.titulo{
+		right: 13%;
+		top: 25%;
+	}
+	.mini-texto{
+		left: 45px;
+		bottom: 280px;
+	}
+	.scrolldown{
+		left: -80px;
+	}
+	.playlist{
+		right: 80px;
+	}
+}
+@media all and (max-width: 360px){
+	.titulo{
+		top: 40%;
+	}
+	.mini-texto{
+		display: none;
+	}
+	.scrolldown{
+		display: none;
+	}
+}
+@media all and (max-width: 320px){
+	.nav{
+		padding: 0 10px;
+	}
+	.titulo{
+		right: 12%;
+		top: 30%;
+	}
+	.titulo h1{
+		font-size: 1.5rem;
+	}
+	.playlist{
+		right: 39px;
+	}
+	.img02{
+		width: 275px;
+		left: 30px;
+		background-position-x:center;
+	}
+	@keyframes efectodos{
+	0%{
+		left: 30px;
+		width: 0;
+	}
+	50%{
+		left: 30px;
+		width: 275px;
+	}
+	100%{
+		left: 30px;
+		width: 0;
+	}
+}
+}
