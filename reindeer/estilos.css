@@ -1,0 +1,741 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background: #f8f7fd;
+	/*color: #000;*/
+	width: 100%;
+	height: 100vh;
+	font-family: fantasy;
+	/*overflow: hidden;*/
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #494949;
+}
+.overlay{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	background: #ffeb00;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+	animation: overlay 1.5s ease;
+
+	
+}
+/*.overlay h2{
+	position: absolute;
+	top: 50%;
+	left: 36%;
+	font-size: 7rem;
+	opacity: 0;
+	animation: h2 .7s ease;
+}*/
+@keyframes overlay{
+	0%{
+		opacity: 1;
+		height: 100vh;
+	}
+	100%{
+		opacity: 1;
+		height: 0vh;
+	}
+}
+@keyframes h2{
+	0%{	
+		opacity: 1;
+		transform: scale3d(1.5, 1.5, 1.5);
+	}
+	50%{
+		opacity: 1;
+		transform: scale3d(1.5, 1.5, 1.5);
+	}
+	75%{
+		opacity: 1;
+		transform: scale3d(1.5, 1.5, 1.5);
+	}
+	100%{
+		opacity: 1;
+		transform: rotateX(89deg);
+	}
+}
+.wrapper{
+	background: url(reindeer.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	z-index: 4;
+	animation: wrapper 3s ease-out;
+}
+@keyframes wrapper{
+	0%{
+		z-index: 0;
+	}
+	100%{
+		z-index: 4;
+	}
+}
+.title{
+	background: #FFEB00;
+	position: fixed;
+	width: 250px;
+	height: 400px;
+	z-index: 1;
+	animation: title 1.7s ease;
+}
+@keyframes title{
+	0%{
+		top: -45%;
+		opacity: 0;
+	}
+	100%{
+		top: 0;
+		opacity: 1;
+	}
+}
+.title h2{
+	font-size: 3rem;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	letter-spacing: 5px;
+	text-align: center;
+	margin-top: 90px;
+	font-weight: 100;
+}
+.title p{
+	text-align: center;
+	text-transform: uppercase;
+}
+.icono{
+	display: none;
+}
+.nav{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	text-transform: uppercase;
+	white-space: pre-line;
+	/*font-weight: 600;*/
+	width: 250px;
+	text-align: end;
+	animation: nav 2.4s ease;
+}
+@keyframes nav{
+	0%{
+		left: -250px;
+	}
+	100%{
+		left: 0;
+	}
+}
+.nav li{
+	padding: 10px;
+}
+.nav ul li{
+	color: #494949;
+}
+.nav ul li:hover{
+	color: #fff;
+	background: #494949;
+}
+.nav ul li a:hover{
+	color: #fff;
+}
+/*menu hamburguesa*/
+
+.menu-wrap{  /*posiciono el contenedor entero fixed del lado derecho*/
+	position: fixed;
+	top: 0;
+	right: 20px;
+	z-index: 5;
+	display:none;
+	animation: menu-wrap 2.4s ease;
+}
+@keyframes menu-wrap{
+	0%{
+		top: -95px;
+	}
+	100%{
+		top: 0;
+	}
+}
+.menu-wrap .toggler{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 7; /*destaco el z index para que este por encima del resto*/
+	cursor: pointer;
+	width: 50px;
+	height: 50px;  /*MEDIDAS DEL COSO*/
+	opacity: 0; /*0 PARA ACTIVARLO con el checked*/
+}
+.menu-wrap .hamburger{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	background: transparent;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*lineas de la hamburguesa, se modifica el primer DIV vacio luego de la class hamburger*/
+.menu-wrap .hamburger > div{
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 4s ease; /*genera fluidez al darle click para removerlo*/
+}
+/*se crea con before y after las otras 2 lineas de la hamburguesa, para un total de 3 lineas y tener la burguer menu esteticamente listo*/
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+	content: '';
+	position: absolute;
+	z-index: 5;
+	top: -10px;
+	width: 100%;
+	height: 2px;
+	background: #000;
+}
+/*muevo la linea del after de -10 a 10px y voala*/
+.menu-wrap .hamburger > div:after{
+	top: 10px;
+}
+/*animacion del toggler, es decir, el checkbox animando el div vacio*/
+.menu-wrap .toggler:checked + .hamburger > div{
+	transform: rotate(135deg);
+}
+/*convertir las lineas en X al click*/
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after{
+	top: 0;
+	transform: rotate(90deg);
+}
+/*rotar en hover cuando se clickee*/
+.menu-wrap .toggler:checked + .hamburger > div{
+	transform: rotate(225deg);
+}
+/*mostrar menu al darle click*/
+.menu-wrap .toggler:checked ~ .menu{
+	visibility: visible;
+}
+.menu-wrap .toggler:checked ~ .menu > div{
+	transform: scale(1);
+	transition-duration: 0.75s;
+}
+.menu-wrap .toggler:checked ~ .menu > div > div{
+	opacity: 1;
+	transition: opacity 0.4s ease;
+}
+.menu-wrap .menu{ /*ajustar menu al centro*/
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu-wrap .menu > div{
+	/*se ajusta el SEGUNDO div vacio*/
+	background: rgba(255, 201, 4, 0.98);
+	width: 200vh;
+	height: 200vh;
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0);
+	transition: all 0.4s ease;
+	text-transform: uppercase;
+}
+.menu-wrap .menu > div > div{
+	text-align: center;
+	max-width: 90vh;
+	max-height: 100vh;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+.menu-wrap .menu > div > div ul > li{
+	list-style: none;
+	color: red;
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+.menu-wrap .menu > div > div ul > li > a:hover{
+	text-decoration: underline;
+}
+.scroll{
+	position: absolute;
+	bottom: 70px;
+	/*left: 60px;*/
+	transform: rotate(-90deg);
+	/*font-weight: 600;*/
+	letter-spacing: 1px;
+	color: #494949;
+	animation: scroll 2s ease-out;
+}
+@keyframes scroll{
+	0%{
+		/*bottom: -75px;*/
+		opacity: 0;
+		transform: rotateY(45deg);
+	}
+	100%{
+		/*bottom: 70px;*/
+		opacity: 1;
+	}
+}
+.scroll:before{
+	content: '';
+	width: 70px;
+	border: 1px solid #000;
+	margin: 0 20px 0 0;
+	transform: translateY(-3px);
+	display: inline-block;
+}
+
+.titulo{
+	position: absolute;
+	top: 15%;
+	right: 10%;
+	color: #494949;
+	animation: titulo 1.8s ease;
+}
+@keyframes titulo{
+	0%{
+		opacity: 0;
+		top: -25%;
+	}
+	100%{
+		opacity: 1;
+		top: 15%;
+	}
+}
+.titulo h1{
+	font-size: 7rem;
+	font-weight: lighter;
+}
+.titulo p{
+	width: 250px;
+	position: absolute;
+	right: -50px;
+	margin-top: 15px;
+}
+.watchnow{
+	display: flex;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 400px;
+	height: 100px;
+	background: #FFEB00;
+	animation: watchnow 2.2s ease-in-out;
+}
+.fa{
+	position: relative;
+    top: 28%;
+    font-size: 3rem;
+    color: #fff;
+    left: 20px;
+}
+/*.watchnow .icon{
+}*/
+@keyframes watchnow{
+	0%{
+		transform: rotateY(45deg);
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.watchnow p{
+	align-self: center;
+	text-transform: uppercase;
+	border-bottom: 3px solid;
+	padding: 10px;
+	position: relative;
+    right: -30px;
+	/*font-weight: 600;*/
+}
+.redes{
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	color: #494949;
+	animation: redes 2s ease;
+}
+@keyframes redes{
+	0%{
+		/*bottom: -5%;*/
+		opacity: 0;
+		transform: rotateZ(45deg);
+	}
+	100%{
+		/*bottom: 5%;*/
+		opacity: 1;
+	}
+}
+.redes ul{
+	display: flex;
+}
+.redes ul li{
+	padding: 10px;
+}
+.fb:hover{
+	background: #FFEB00;
+	border-radius: 50%;
+}
+.tw:hover{
+	background: #FFEB00;
+	border-radius: 50%;
+}
+.ig:hover{
+	background: #FFEB00;
+	border-radius: 50%;
+}
+.ellipse-container{
+	width: 608px;   /*coloco un contenedor/circulo principal con las medidas y posiciones que afecten al interior del div*/
+	height: 608px;
+	/*background: #ffeb00;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	margin: 0 auto;
+	animation: ellipse 2.7s ease-in;
+}
+@keyframes ellipse{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.ellipse{
+	position: absolute;  /*luego, lo posiciono y le digo que cada circulo tenga un border radius de 50% y un border style solido*IMPORTANTE* para que se visualice el borde*/
+	top: 0;
+	border-radius: 50%;
+	border-style: solid;
+}
+.ellipse.thin{
+	width: 100%;   /*en este caso, el primer circulo es el externo, para dar alusion que los demas estan dentro de este circulo mas delgado*/
+	height: 100%;
+	border-width: 1px;
+	border-color: #494949;
+	opacity: .5;
+	top: -10px;
+	left: -10px;
+}
+.ellipse.thick{
+	width: 93%; 	/*ahora, viene el primer circulo dentro del circulo anterior, mas pequeno, y, con un borde color #FFF y de 10px para que sea del mismo tamano que el proximo, para que pareciera que el proximo circulo gira dentro de algo*/
+	height: 93%;
+	border-width: 10px;
+	border-color: #fff;
+	/*transform: rotateY(-45deg);*/
+	top: 12px;
+	left: 12px;
+}
+.ellipse.yellow{
+	width: 93%; 	/*ultimo circulo, mismas medidas que el anterior, es decir 93%x93%, mismo border style de 10px, y un borde color amarillo y TRANSPARENT para que el efecto de rotacion a continuacion tenga sentido*/
+	height: 93%;
+	border-width: 10px;
+	border-color: #ffeb00 transparent;		/*es importante que el color del borde sea 1 color especifico y el otro transparent para dar esa sensacion del efecto al rotar*/
+	transform: rotate(-45deg);  	/*-45grados para iniciar, no es relevante es solo cuestion de estetica pero debe ser igual al transform del keyframes*/
+	top: 12px;
+	left: 12px;
+	animation: ellipseRotate 15s ease-in-out infinite;
+}
+@keyframes ellipseRotate{
+	0%{
+		transform: rotate(-45deg);
+	}
+	100%{
+		transform: rotate(-405deg);
+	}
+}
+.circle1, .circle2{
+	border-style: solid;
+	width: 64px;
+	height: 64px;
+	border-width: 1px;
+	border-color: rgba(0,0,0,.5);
+	border-radius: 50%;
+	position: absolute;
+}
+.circle1{
+	top: 150px;
+	left: 150px;
+	/*animation: circulouno 2s ease-in-out infinite;*/
+}
+/*@keyframes circulouno{
+	0%{
+		top: 150px;
+	}
+	50%{
+		top: 170px;
+	}
+	100%{
+		top: 150px;
+	}
+}*/
+.circle2{
+	bottom: 150px;
+	right: 130px;
+}
+.circle1::before, .circle1::after, .circle2::before, .circle2::after{
+	content: '';
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+}
+.circle1::before, .circle2::before{
+	width: 12px;
+	height: 12px;
+	background: #fff;
+	z-index: 1;
+}
+.circle1::after, .circle2::after{
+	width: 40px;
+	height: 40px;
+	background: #ffeb00;
+}
+.circle1 span, .circle2 span{
+	position: absolute;
+	top: 25px;
+	
+	width: 100px;
+	font-style: 14px;
+}
+.circle1 span{
+	left: 75px;
+}
+.circle2 span{
+	left: -100px;
+}
+/*mediasq*/
+@media all and (max-width: 1430px){
+	.watchnow{
+		width: 300px;
+	}
+}
+@media all and (max-width: 1220px){
+	.title{
+		width: 200px;
+		height: 300px;
+	}
+	.watchnow{
+		width: 200px;
+	}
+}
+@media all and (max-width: 1150px){
+	
+	.title h2{
+		margin-top: 50px;
+	}
+	.nav{
+		left: -50px;
+	}
+}
+@media all and (max-width: 1024px){
+	.title{
+		height: 200px;
+	}
+	.title h2{
+		margin-top: 0;
+	}
+	.nav{
+		left: 0;
+		text-align: left;
+	}
+	.watchnow{
+		top: 75%;
+	}
+	.titulo h1{
+		font-size: 6rem;
+	}
+}@media all and (max-width: 880px){
+	.title{
+	display: flex;
+	width: 100%;
+	height: 70px;
+	}
+	.title h2{
+		flex-direction: initial;
+		align-items: center;
+	}
+	.title p{
+		align-self: center;
+	}
+}
+@media all and (max-width: 820px){
+	.wrapper{
+		height: 1024px;
+	}
+	.watchnow{
+		top: 80%;
+		height: 50px;
+	}
+	.fa{
+		top: 15%;
+		font-size: 2rem;
+	}
+}
+@media all and (max-width: 768px){
+	.nav{
+		display: none;
+	}
+/*	.icono{
+		display: flex;
+	    align-self: center;
+	    position: absolute;
+	    right: 0;
+	    padding: 30px;
+	    font-size: 30px;
+	}*/
+	.menu-wrap{
+		display: initial;
+	}
+	.titulo h1{
+		font-size: 5rem;
+	}
+	.watchnow{
+		top: 90%;
+	}
+	.redes{
+		display: none;
+	}
+}
+@media all and (min-width: 731px){
+	.ellipse-container{
+		width: 550px;
+		height: 550px;
+	}
+}
+@media all and (max-width: 672px){
+	.ellipse-container{
+		width: 400px;
+		height: 400px;
+		top: 55%;
+	}
+	.ellipse.thin{
+		top: 0;
+		left: 0;
+	}
+	.circle1{
+		top: 75px;
+		left: 55px;
+	}
+	.circle2{
+		bottom: 95px;
+		right: 60px;
+	}
+}
+@media all and (max-width: 520px){
+	.wrapper{
+		height: 1024px;
+	}
+	.titulo h1{
+		position: absolute;
+		right: 100px;
+		top: -30px;
+	}
+	.titulo p{
+		margin-top: 60px;
+		right: 40px;
+	}
+}
+@media all and (max-width: 488px){
+	.title p{
+		display: none;
+	}
+	.titulo h1{
+		font-size: 4rem;
+	}
+}
+@media all and (max-width: 422px){
+	.title h2{
+		font-size: 2rem;
+	}
+	.ellipse-container{
+		width: 280px;
+		height: 280px;
+		top: 51%;
+	}
+	.circle1, .circle2, .scroll{
+		display: none;
+	}
+	.titulo h1{
+		font-size: 3rem;
+		right: 80px;
+		top: 40px;
+	}
+	.titulo p{
+		margin-top: 100px;
+	    right: 90px;
+	    font-size: 13px;
+	    text-align: justify;
+	    width: 155px;
+	}
+}
+@media all and (max-width: 360px){
+	.ellipse-container{
+		width: 250px;
+		height: 250px;
+	}
+	.titulo h1{
+		right: 55px;
+	}
+	.titulo p{
+		right: 65px;
+	}
+	}
+@media all and (max-width: 330px){
+	.titulo h1{
+		right: 40px;
+	}
+	.titulo p{
+		right: 45px;
+	}
+	.ellipse-container{
+		width: 230px;
+		height: 230px;
+	}
+	.ellipse.thin{
+		top: 5px;
+		left: 5px;
+	}
+}
