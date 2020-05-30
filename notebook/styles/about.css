@@ -24,6 +24,7 @@ body{
 	position: relative;
 	top: 45px;
 	align-items: center; /*centrar elementos dentro del bloque*/
+	font-family: 'Poppins'
 }
 .nav .title{
 	font-size: 1rem;
@@ -336,4 +337,173 @@ input::placeholder, textarea::placeholder{
 }
 label{
 	padding: 5px;
+}
+@media all and (max-width: 1152px){
+	.texto-about{
+		position: relative;
+		left: 30px;
+	}
+	.fotos-1{
+		width: 350px;
+	}
+	.fotos-1 img{
+		width: 350px;
+    	height: 550px;
+	}
+	.fotos-1 img:nth-child(2){
+		width: 240px;
+    	height: 370px;
+	}
+}
+@media all and (max-width: 1024px){
+	.texto-about{
+		left: 60px;
+		width: 400px;
+	}
+	.titulo-about{
+		font-size: 2.5rem;
+	}
+	.p1{
+		font-size: .9rem;
+	}
+	.p2{
+		font-size: 1.2rem;
+	}
+	.fotos-1{
+		width: 300px;
+	}
+	.fotos-1 img:nth-child(2) {
+		width: 220px;
+		height: 340px;
+		left: -40px;
+	}
+}
+@media all and (max-width: 950px){
+	.fotos-1 img{
+	width: 300px;
+    height: 500px;
+	}
+	.fotos-1 img:nth-child(2){
+	width: 170px;
+    height: 280px;
+    left: -80px;
+	}
+}
+@media all and (max-width: 830px){
+	.texto-about{
+		left: 10px;
+	}
+	.titulo-about{
+		font-size: 2rem;
+	}
+	.p1{
+		font-size: .7rem;
+	}
+	.p2{
+		font-size: 1rem;
+	}
+	.fotos-1 img {
+    width: 250px;
+    height: 400px;
+	}
+	.fotos-1 img:nth-child(2) {
+    width: 140px;
+    height: 230px;
+    left: -35px;
+	}
+}
+@media all and (max-width: 730px){
+	.about-us{
+		padding-bottom: 60px;
+	}
+	.fotos-1 img {
+    width: 200px;
+    height: 300px;
+	}
+	.fotos-1 img:nth-child(2) {
+    width: 120px;
+    height: 190px;
+    left: -35px;
+    top: -50px;
+	}
+	.fotos-1 img:nth-child(2):hover{
+	top: -100px;
+	}
+}
+@media all and (max-width: 600px){
+	.texto-about {
+    left: -10px;
+	}
+	.fotos-1 img {
+    width: 160px;
+    height: 260px;
+	}
+}
+@media all and (max-width: 500px){
+	body{
+		width: 90%;
+	}
+	.menu-wrap{
+		right: 50px;
+	}
+}
+@media all and (max-width: 412px){
+	.contact{
+	height: 80%;
+	}
+	input{
+		height: 40px;
+	}
+}
+@media all and (max-width: 375px){
+	.fotos-1 img:nth-child(2) {
+    left: -15px;
+	}
+	.close{
+	font-size: 2rem;
+	}
+	label{
+		padding: 0;
+	}
+	.contact{
+	width: 80%;
+    height: 80%;
+	}
+}
+@media all and (max-width: 360px){
+	.contact {
+    width: 80%;
+    height: 90%;
+	}
+}
+@media all and (max-width: 320px){
+	.fotos-1 img {
+    width: 100px;
+    height: 160px;
+	}
+	.fotos-1 img:nth-child(2) {
+    width: 80px;
+    height: 120px;
+    top: 0px;
+	}
+	.about-us {
+    padding-bottom: 140px;
+	}
+	.titulo-about {
+    font-size: 1.5rem;
+	}
+	.p2 {
+    font-size: .9rem;
+	}
+	.titulo-h1{
+	font-size: 1.5rem;
+	top: -60px;
+	}
+	.contact {
+    width: 80%;
+    height: 95%;
+	}
+	input{
+		height: 30px;
+	}
 }
