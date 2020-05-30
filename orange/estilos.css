@@ -1,0 +1,569 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+body{
+
+}
+
+.nav{
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+	text-transform: uppercase;
+	font-family: fantasy;
+	font-size: 1rem;
+	align-items: center;
+	animation: nav 2s ease;
+}
+@keyframes nav{
+	0%{
+		margin-top: -75px;
+	}
+	100%{
+		margin-top: 0;
+	}
+}
+.logo{
+	padding: 10px;
+	font-size: 2rem;
+}
+.nav ul li{
+	display: inline-block;
+	padding: 10px;
+}
+.menu-lateral{
+	/*display: flex;
+	padding: 10px;*/
+}
+
+.title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.title h1{
+	font-size: 14rem;
+	text-transform: uppercase;
+}
+.title .parrafo-uno{
+	font-size: 2.5rem;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    color: #bdbdbd;
+    font-weight: lighter;
+    animation: parrafo-uno 1.5s ease;
+}
+@keyframes parrafo-uno{
+	0%{
+		bottom: 300%;
+	}
+	100%{
+		bottom: 100%;
+	}
+}
+.title .numeros{
+	font-size: 2rem;
+    color: #bdbdbd;
+    position: absolute;
+    bottom: 95%;
+    right: 0;
+    animation: numeros 2s ease;
+}
+@keyframes numeros{
+	0%{
+		bottom: 380%;
+	}
+	100%{
+		bottom: 95%;
+	}
+}
+.title .numeros span{
+	font-size: 4rem;
+    color: #000;
+}
+.title .boton{
+	font-size: 1.5rem;
+	background: #000;
+	color: #fff;
+	padding: 10px;
+	position: absolute;
+	left: 0;
+	bottom: auto;
+	border-radius: 10px;
+	z-index: -2;
+	overflow: hidden;
+	animation: boton 1.4s ease;
+}
+.title .boton:hover{
+	background: rgb(255, 140, 0);
+	transition: 1.3s ease;
+}
+@keyframes boton{
+	0%{
+		left: -100%;
+	}
+	100%{
+		left: 0;
+	}
+}
+/*.title .boton::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: darkorange;
+	z-index: -1;
+	border-radius: 10px;
+	transform: translateX(-100%);
+	transition: transform 0.4s
+}
+.title .boton:hover::before{
+	transform: translateX(0);
+}*/
+.title .parrafo-dos{
+	font-size: 2.5rem;
+	color: #000;
+	position: absolute;
+	right: 0;
+	bottom: auto;
+	width: 300px;
+	opacity: 1;
+	animation: parrafo-dos 3s ease;
+}
+@keyframes parrafo-dos{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.title .parrafo-dos span{
+	color: #6db946;
+}
+.title .parrafo-tres{
+	font-size: 1rem;
+	color: #949090;
+	position: absolute;
+	right: 0;
+	bottom: -150px;
+	width: 300px;
+	animation: parrafo-tres 4s ease;
+}
+@keyframes parrafo-tres{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.jugo{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	animation: jugo .5s ease;
+}
+@keyframes jugo{
+	0%{
+		top: -50%;
+	}
+	100%{
+		top: 50%;
+	}
+}
+.jugo img{
+	height: 600px;
+	animation: juguito 3.3s ease infinite;
+}
+@keyframes juguito{
+	0%{
+		transform: translateY(30px);
+	}
+	50%{
+		transform: translateY(1px);
+	}
+	100%{
+		transform: translateY(30px);
+	}
+}
+.flecha-izq{
+	position: absolute;
+    left: 40px;
+    top: 50%;
+    font-size: 2rem;
+    border-style: solid;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transform: rotate(90deg);
+    font-family: cursive;
+    opacity: .5;
+    padding: 3px 0 0 20px;
+    animation: flecha-iz 0.8s ease infinite;
+}
+
+.flecha-der{
+	position: absolute;
+    right: 40px;
+    top: 50%;
+    font-size: 2rem;
+    border-style: solid;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transform: rotate(-90deg);
+    font-family: cursive;
+    opacity: .5;
+    padding: 3px 0 0 18px;
+    animation: flecha-de 0.8s ease infinite;
+}
+@keyframes flecha-iz{
+	0%{
+		padding: 3px 0 0 20px;
+	}
+	65%{
+		padding: 5px 0 0 20px;
+	}
+	100%{
+		padding: 3px 0 0 20px;
+	}
+}
+@keyframes flecha-de{
+	0%{
+		padding: 3px 0 0 18px;
+	}
+	65%{
+		padding: 5px 0 0 18px;
+	}
+	100%{
+		padding: 3px 0 0 18px;
+	}
+}
+/*menu hamburguesa*/
+.menu-wrap{ /*ajusto medidas generales*/
+	position: fixed;
+	top: 0;
+	right: 20px;
+	z-index: 1;
+	display: none;
+}
+.menu-wrap .toggler{ /*ajusto el input, su tamano y oculto el checkbox*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2; /*importante este por encima de los demas elementos*/
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+}
+.menu-wrap .hamburger{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	width: 60px;
+	height: 60px;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*lineas de la hamburguesa, se modifica el primer DIV vacio luego de la class hamburger para pintar la linea*/
+.menu-wrap .hamburger > div {
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.4s ease; /*se le agrega la transition para que tenga fluidez*/
+}
+/*se crea con before y after las otras 2 lineas de la hamburguesa, para un total de 3 lineas y tener la burguer menu esteticamente listo*/
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	width: 100%;
+	height: 2px;
+	background: #000;
+}
+/*muevo la linea del after de -10 a 10px y voala*/
+.menu-wrap .hamburger > div:after{
+	top: 10px;
+}
+/*animacion del toggler, es decir, el checkbox animando el div vacio*/
+.menu-wrap .toggler:checked + .hamburger > div{
+	transform: rotate(135deg);
+}
+/*convertir lineas en X*/
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after{
+	top: 0;
+	transform: rotate(90deg);
+}
+/*rotar en hover cuando se clickee*/
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+	transform: rotate(225deg);
+}
+/*mostrar menu*/ 
+.menu-wrap .toggler:checked ~ .menu{
+	visibility: visible;
+}
+.menu-wrap .toggler:checked ~ .menu > div {
+	transform: scale(1);
+	transition-duration: 0.75s;
+}
+.menu-wrap .toggler:checked ~ .menu > div > div{
+	opacity: 1;
+	transition: opacity 0,4s ease;
+}
+.menu-wrap .menu{ /*se ajusta el menu en cuestion en el centro*/
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.menu-wrap .menu > div{ /*se ajusta el segundo DIV vacio*/
+	background: rgba(255, 140, 0, 0.97);
+	width: 200vh;
+	height: 200vh;
+	display: flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	transform: scale(0);
+	transition: all 0.4s ease;
+	text-transform: uppercase;
+}
+.menu-wrap .menu > div > div{
+	text-align: center;
+	max-width: 90vh;
+	max-height: 100vh;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+.menu-wrap .menu > div > div ul > li{
+	list-style: none;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+.menu-wrap .menu > div > div ul > li > a{
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.4s ease;
+}
+.menu-wrap .menu > div > div ul > li > a:hover{
+	text-decoration: underline;
+}
+
+@media all and (max-width: 1280px){
+	.title h1{
+		font-size: 10rem;
+	}
+	.jugo img{
+		height: 500px;
+	}
+	.flecha-izq{
+		left: 5%;
+		top: 90%;
+	}
+	.flecha-der{
+		right: 5%;
+		top: 90%;
+	}
+
+}
+@media all and (max-width: 1120px){
+	.lista-1024{
+		font-size: .9rem;
+	}
+}
+@media all and (max-width: 1024px){
+	.lista-1024{
+		display: none;
+	}
+	.logo{
+		position: absolute;
+		top: 1%;
+		left: 1%;
+	}
+	.menu-wrap{
+		display: initial;
+	}
+}
+@media all and (max-width: 960px){
+	.title h1{
+		font-size: 10rem;
+	}
+}
+@media all and (max-width: 823px){
+	body{
+		height: 750px;
+	}
+	.title h1{
+		font-size: 8rem;
+	}
+	.jugo img{
+		height: 400px;
+	}
+}
+@media all and (max-width: 680px){
+	.title h1{
+		font-size: 7rem;
+	}
+	.title .parrafo-dos{
+		font-size: 2rem;
+		bottom: -230px;
+		width: auto;
+	}
+	.title .parrafo-tres{
+		right: 80px;
+		bottom: -300px;
+		text-align: justify;
+	}
+	.title .boton{
+		font-size: 1rem;
+		left: 350px;
+	}
+	@keyframes boton{
+	0%{
+		left: -100%;
+	}
+	100%{
+		left: 350px;
+	}
+}
+@media all and (max-width: 570px){
+	.title h1{
+		font-size: 5rem;
+	}
+	.title .parrafo-uno{
+		font-size: 1.5rem;
+	}
+	.title .numeros span{
+		font-size: 3rem;
+	}
+	.title .parrafo-dos{
+		font-size: 1.5rem;
+		bottom: -215px;
+	}
+	.title .boton{
+		left: 210px;
+    	width: max-content;
+    	bottom: -40px;
+	}
+	@keyframes boton{
+	0%{
+		left: -100%;
+	}
+	100%{
+		left: 210px;
+	}
+}
+	.title .parrafo-tres{
+		right: 15px;
+		bottom: -280px;
+	}
+}
+@media all and (max-width: 500px){
+	.flecha-izq, .flecha-der{
+		border-style: none;
+	}
+	.flecha-der{
+		padding: 3px 0 0 24px;
+
+	}
+	@keyframes flecha-de{
+	0%{
+		padding: 3px 0 0 24px;
+	}
+	65%{
+		padding: 5px 0 0 24px;
+	}
+	100%{
+		padding: 3px 0 0 24px;
+	}
+}
+}
+@media all and (max-width: 420px){
+	.flecha-izq{
+		left: 20%;
+		top: 70%;
+	}
+	.flecha-der{
+		right: 19%;
+		top: 70%;
+	}
+	.jugo img{
+		height: 300px;
+	}
+}
+@media all and (max-width: 400px){
+	.title h1{
+		font-size: 4rem;
+	}
+	.title .boton{
+		left: 150px;
+	    width: max-content;
+	    bottom: -25px;
+	    padding: 4px;
+	}
+	@keyframes boton{
+	0%{
+		left: -100%;
+	}
+	100%{
+		left: 150px;
+	}
+}
+	.title .parrafo-dos{
+		font-size: 1.2rem;
+		bottom: -250px;
+	}
+	.title .parrafo-tres{
+		right: 10px;
+		bottom: -335px;
+		width: 250px;
+	}
+	.menu-wrap .menu > div > div ul > li{
+		font-size: 1rem;
+	}
+}
+@media all and (max-width: 360px){
+	.flecha-izq, .flecha-der{
+		top: 75%;
+	}
+}
+@media all and (max-width: 320px){
+	.flecha-izq, .flecha-der{
+		top: 85%;
+	}
+}
