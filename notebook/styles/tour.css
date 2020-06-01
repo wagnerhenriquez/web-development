@@ -4,6 +4,7 @@ html {
   color: #011627;
   background-color: #011627;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 body{
 	overflow-y: hidden;
@@ -11,6 +12,9 @@ body{
 a{
 	text-decoration: none;
 	color: #fff;
+}
+a:hover{
+	text-decoration: underline;
 }
 main{
 overflow-y: hidden; 
@@ -296,4 +300,27 @@ li:nth-child(3n){
    p {
      font-size: 5.7vh;
    }
+}
+.fas{
+	font-size: 2rem;
+	position: relative;
+	left: 100px;
+	animation: arrowd 1.5s ease infinite;
+}
+@keyframes arrowd{
+	0%{
+		left: 100px;
+	}
+	50%{
+		left: 109px;
+	}
+	100%{
+		left: 100px;
+	}
+}
+.txt{
+	font-size: 3rem;
+	text-transform: uppercase;
+	opacity: .1;
+	font-family: 'Anton', sans-serif;
 }
