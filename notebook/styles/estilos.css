@@ -195,6 +195,7 @@ a{
 	display: none;
 	
 }
+/* inicio contact modal */
 .close{
 	font-size: 3rem;
 	text-align: right;
@@ -231,6 +232,7 @@ input::placeholder, textarea::placeholder{
 label{
 	padding: 5px;
 }
+/* fin modal */
 .titulo{
 	position: absolute; /*posicion absoluta para jugar con su ubicacion*/
 	top: 40%;

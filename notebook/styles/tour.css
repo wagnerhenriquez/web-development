@@ -207,26 +207,31 @@ li:nth-child(3n){
 .img1{
 	background-image: url(../img/party1.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 .img2{
 	background-image: url(../img/party2.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 .img3{
 	background-image: url(../img/party3.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 .img4{
 	background-image: url(../img/party4.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 .img5{
 	background-image: url(../img/party5.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 .country{
@@ -241,24 +246,29 @@ li:nth-child(3n){
 .sec1{
 	background-image: url(../img/sec1.jpg);
 	background-size: cover;
+	background-position: center;
 }
 .sec2{
 	background-image: url(../img/sec2.jpg);
 	background-size: cover;
+	background-position: center;
 }
 .sec3{
 	background-image: url(../img/sec3.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 .sec4{
 	background-image: url(../img/sec4.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 .sec5{
 	background-image: url(../img/sec5.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 .sec6{
@@ -270,6 +280,7 @@ li:nth-child(3n){
 .sec7{
 	background-image: url(../img/sec7.jpg);
 	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 }
 
@@ -301,8 +312,8 @@ li:nth-child(3n){
      font-size: 5.7vh;
    }
 }
-.fas{
-	font-size: 2rem;
+.a1{
+	font-size: 4rem;
 	position: relative;
 	left: 100px;
 	animation: arrowd 1.5s ease infinite;
@@ -318,9 +329,94 @@ li:nth-child(3n){
 		left: 100px;
 	}
 }
+.a2{
+	font-size: 4rem;
+	position: relative;
+	left: 100px;
+	cursor: pointer;
+	animation: arrowd 1.5s ease infinite;
+}
 .txt{
 	font-size: 3rem;
 	text-transform: uppercase;
 	opacity: .1;
 	font-family: 'Anton', sans-serif;
 }
+.ticket{
+	font-style: italic;
+}
+.bg1{
+	background-image: url(../img/bg1.jpg);
+	background-size: cover;
+}
+.bg2{
+	background-image: url(../img/bg2.jpg);
+	background-size: cover;
+}
+/* inicio contact modal */
+.contact{
+	width: 70%;
+	height: 70%;
+	background-color: #9661FF;
+	border: 1px solid #fff;
+	padding: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10000;
+	writing-mode: horizontal-tb;
+	display: none;
+	
+}
+.close{
+	font-size: 3rem;
+	text-align: right;
+	color: #fff;
+}
+form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+input, select{
+	width: 100%;
+	height: 50px;
+	background: rgba(196, 175, 239, 0.15);
+	color: #fff;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+	transition: .5s;
+}
+input:hover{
+	background: purple;
+}
+select{
+	background-color: #9d6dfd !important;
+	
+}
+textarea{
+	width: 100%;
+	padding: 5px;
+	background: rgba(196, 175, 239, 0.15);
+	color: #fff;
+	border: none;
+}
+input::placeholder, textarea::placeholder{
+	color: #fff;
+}
+label{
+	padding: 5px;
+	color: #fff;
+}
+.x{
+	font-size: 4rem;
+	position: relative;
+	top: 0;
+	transition: .5s ease;
+	display: none;
+	cursor: pointer;
+}
+/* fin modal */

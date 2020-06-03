@@ -9,3 +9,15 @@ document.addEventListener('wheel', function (e) {
     document.body.scrollLeft -= delta;
     e.preventDefault();
 });
+
+const contacto = document.getElementById('contact')
+
+contact.addEventListener('click', () => {
+    contact2.style.display = "initial"
+})
+
+const cerrar = document.getElementById('close')
+
+cerrar.addEventListener('click', () => {
+    contact2.style.display = "none"
+})
