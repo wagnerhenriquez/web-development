@@ -33,7 +33,8 @@ overflow-x: auto;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: 'Poppins';
-    left: 100px;
+	left: 100px;
+	transition: all .8s ease;
 }
 /*menu hamburguesa*/
 .menu-wrap{
@@ -41,6 +42,7 @@ overflow-x: auto;
 	top: 30px;
 	right: 100px;
 	z-index: 5;
+	transition: all .8s ease;
 	/*display: none;*/
 }
 .menu-wrap .toggler{
@@ -342,7 +344,6 @@ li:nth-child(3n){
 /* inicio contact modal */
 .contact{
 	width: 70%;
-	height: 70%;
 	background-color: #9661FF;
 	border: 1px solid #fff;
 	padding: 20px;
@@ -406,6 +407,7 @@ label{
 	cursor: pointer;
 }
 /* fin modal */
+/* media queries */
 @media all and (max-width:1200px){
 	html{
 		writing-mode: horizontal-tb;
@@ -413,9 +415,15 @@ label{
 	body{
 		overflow-y: auto;
 	}
+	.menu-vertical{
+		writing-mode: vertical-lr;
+	}
 	h1{
 		 -webkit-writing-mode: vertical-lr;
 		 font-size: 10vh;
+	}
+	ul{
+		padding: 10px;
 	}
 	.txt{
 		font-size: 2.2rem;
@@ -433,8 +441,9 @@ label{
 		animation: a1 1.5s infinite;
 	}
 	.a2{
-	transform: rotate(90deg);
-	animation: a2 1.5s infinite;
+		font-size: 3rem;
+		transform: rotate(90deg);
+		animation: a2 1.5s infinite;
 	}
 	@keyframes a2{
 		0%{
@@ -463,8 +472,33 @@ label{
 		}
 	}
 }
-
+@media all and (max-width: 850px){
+		.nav{
+		left: 30px;
+	}
+	.menu-wrap{
+		right: 30px;
+	}
+}
+@media all and (max-width: 700px){
+	h1{
+		font-size: 8vh;
+	}
+}
+@media all and (max-width: 550px){
+	h1{
+		font-size: 6vh;
+	}
+	.country{
+		font-size: 1.5rem;
+	}
+	li{
+		font-size: .8rem;
+	}
+}
  /* @media all and (max-height:500px) {
+
+	 
    ul {
      grid-gap: 8px;
      grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -492,3 +526,21 @@ label{
      font-size: 5.7vh;
    }
 } */
+
+@media all and (max-width: 450px){
+	h1{
+		font-size: 4.5vh;
+	}
+	.country{
+		font-size: 1.2rem;
+	}
+}
+@media all and (max-width: 320px){
+		input, 
+		select{
+			height: auto;
+		}
+		textarea{
+			height: 80px;
+		}
+}
