@@ -412,6 +412,21 @@ label{
     left: -35px;
 	}
 }
+/* @media all and (max-height: 812px){
+
+    label{
+        padding: 0;
+    }
+    input, select{
+        height: auto;
+    }
+    textarea{
+        height: 50px;
+    }
+    .x{
+        font-size: 3rem;
+    }
+} */
 @media all and (max-width: 730px){
 	.about-us{
 		padding-bottom: 60px;
@@ -438,6 +453,26 @@ label{
     width: 160px;
     height: 260px;
 	}
+}
+@media all and (max-height: 568px){
+	.contact{
+		height: initial;
+	}
+    .close{
+        font-size: 0;
+    }
+    label{
+        padding: 0;
+    }
+    input, select{
+        height: auto;
+    }
+    textarea{
+        height: 50px;
+    }
+    .x{
+        font-size: 1.5rem;
+    }
 }
 @media all and (max-width: 500px){
 	body{

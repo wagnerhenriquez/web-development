@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/social.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>Social Media | The Notebook</title>
+</head>
+<body>
+    <!-- menu hamburguesa -->
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="./about.html">biographic</a></li>
+                        <li><a href="./worldwide-tour.html">Worldwide Tour</a></li>
+                        <li><a href="#" id="contact">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin menu hamburguesa -->
+<main>
+    
+    <div class="header">
+        <div class="title1">
+            <p class="p1">magazine</p>
+            <h1>notebook</h1>
+            <p class="p2">us edition</p>
+        </div>
+    </div>
+<!-- section grid -->
+    <section class="grid">
+        <div class="img">
+            <img src="./img/chica3.jpg" alt="notebook band">
+        </div>
+        <div class="notice">
+            <div class="review">
+                <img src="./img/person.jpg" alt="person review">
+                <div class="txt-review">
+                <p>John Smith</p>
+                <p>fashion.com</p>
+            </div>
+            </div>
+            <div class="txt">
+            <h2>Make peace with your broken pieaces</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+            <button class="btn">Read more</button>
+            </div>
+        </div>
+    </section>
+<!-- section end -->
+<!-- section grid 2 -->
+        <section class="grid">
+        <div class="notice">
+            <div class="review">
+                <img src="./img/person1.jpg" alt="person review">
+                <div class="txt-review">
+                <p>Rafael Herrera</p>
+                <p>coolstuff.com</p>
+            </div>
+            </div>
+            <div class="txt">
+            <h2>the art as an expression on music</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, explicabo voluptatibus doloribus aspernatur ipsam fugit fugiat tempora vel mollitia dolores dolorem eligendi distinctio esse.</p>
+            <button class="btn">Read more</button>
+            </div>
+        </div>
+            <div class="img">
+            <img src="./img/social1.jpg" alt="notebook band">
+        </div>
+    </section>
+<!-- section 2 end -->
+<!-- section grid 3 -->
+        <section class="grid music">
+        <div class="notice">
+            <div class="review">
+                <img src="./img/person2.jpg" alt="person review" class="caro">
+                <div class="txt-review pp">
+                <p>Caroline Loggiodice</p>
+                <p>music.com</p>
+            </div>
+            </div>
+            <div class="txt pp2">
+            <h2>notebook unplugged is happening</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, explicabo voluptatibus doloribus aspernatur ipsam fugit fugiat tempora vel mollitia dolores dolorem eligendi distinctio esse.</p>
+            <button class="btn">Read more</button>
+            </div>
+        </div>
+            <div class="img music">
+            <img src="./img/music.jpg" alt="notebook band">
+        </div>
+    </section>
+<!-- section 3 end -->
+<!-- section grid 4 -->
+    <section class="grid">
+        <div class="img">
+            <img src="./img/social2.jpg" alt="notebook band">
+        </div>
+        <div class="notice">
+            <div class="review">
+                <img src="./img/person3.jpg" alt="person review">
+                <div class="txt-review">
+                <p>Leia Rogers</p>
+                <p>news.com</p>
+            </div>
+            </div>
+            <div class="txt">
+            <h2>Make peace with your broken pieaces</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+            <button class="btn">Read more</button>
+            </div>
+        </div>
+    </section>
+<!-- section 4 end -->
+<!-- section grid 5 -->
+        <section class="grid">
+        <div class="notice">
+            <div class="review">
+                <img src="./img/person4.jpg" alt="person review">
+                <div class="txt-review">
+                <p>Rafael Herrera</p>
+                <p>coolstuff.com</p>
+            </div>
+            </div>
+            <div class="txt">
+            <h2>the art as an expression on music</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, explicabo voluptatibus doloribus aspernatur ipsam fugit fugiat tempora vel mollitia dolores dolorem eligendi distinctio esse.</p>
+            <button class="btn">Read more</button>
+            </div>
+        </div>
+            <div class="img">
+            <img src="./img/social3.jpg" alt="notebook band">
+        </div>
+    </section>
+<!-- section 5 end -->
+</main>
+		<!-- contacto modal -->
+		<div class="contact" id="contact2">
+			<div class="close" id="close"><i class="fas fa-times x"></i></div>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" placeholder="Name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" placeholder="Email" required>
+				<label for="option">Subject:</label>
+				<select name="option" id="option">
+					<option value="1" requiered>Booking</option>
+					<option value="2">Interview</option>
+					<option value="3">Join our crazy team</option>
+				</select>
+				<label for="message">Message:</label>
+				<textarea name="subjet" id="subjet" cols="10" rows="10" placeholder="Enter your message"
+					required></textarea><br>
+				<input type="submit" id="submit" value="send">
+			</form>
+		</div>
+		<!-- modal end -->
+
+
+<script>
+	const contacto = document.getElementById('contact')
+
+	contact.addEventListener('click', () => {
+		contact2.style.display = "initial"
+	})
+
+	const cerrar = document.getElementById('close')
+
+	cerrar.addEventListener('click', () => {
+		contact2.style.display = "none"
+	})
+</script>
+<script src="https://kit.fontawesome.com/bb499b2907.js" crossorigin="anonymous"></script>
+</body>
+</html>

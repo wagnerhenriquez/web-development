@@ -183,7 +183,7 @@ a{
 /*fin menu hamburguesa*/
 .contact{
 	width: 70%;
-	height: 70%;
+	/* height: 70%; */
 	background-color: #9661FF;
 	border: 1px solid ;
 	padding: 20px;
@@ -715,6 +715,21 @@ label{
 		font-size: 3rem;
 	}
 }
+/* @media all and (max-height: 812px){
+
+    label{
+        padding: 0;
+    }
+    input, select{
+        height: auto;
+    }
+    textarea{
+        height: 50px;
+    }
+    .x{
+        font-size: 3rem;
+    }
+} */
 @media all and (max-width: 760px){
 	.img01{
 		display: none;
@@ -821,6 +836,26 @@ label{
 		width: 0;
 	}
 }
+}
+@media all and (max-height: 568px){
+	.contact{
+		height: initial;
+	}
+    .close{
+        font-size: 0;
+    }
+    label{
+        padding: 0;
+    }
+    input, select{
+        height: auto;
+    }
+    textarea{
+        height: 50px;
+    }
+    .x{
+        font-size: 1.5rem;
+    }
 }
 @media all and (max-width: 480px){
 
@@ -935,7 +970,14 @@ label{
 		left: 45px;
 		width: 0;
 	}
-}
+	}
+	input, 
+	select{
+		height: auto;
+		}
+		textarea{
+		height: 80px;
+		}
 }
 @media all and (max-width: 380px){
 	.nav{
@@ -1002,6 +1044,17 @@ label{
 	100%{
 		left: 30px;
 		width: 0;
+		}
 	}
-}
+	.contact,
+	input, 
+	select,
+	textarea
+		{
+		width: 90%;
+		height: auto;
+		}
+	textarea{
+		height: 80px;
+		}
 }
