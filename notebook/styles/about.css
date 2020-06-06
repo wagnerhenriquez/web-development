@@ -32,25 +32,6 @@ body{
 	letter-spacing: 2px;
 
 }
-.nav .categories{
-	margin-right: auto; /*margen automatico a la derecha*/
-
-}
-.nav .categories ul li{
-	display: inline-block; /*poner elementos li en linea*/
-    position: relative; /*posicion relativa para ubicarlos*/
-    left: 100%;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    padding: 0 5px;
-}
-.nav .menu{
-	margin-right: 50px; /*separar elemento menu del search*/
-	padding: 10px;
-}
-.nav .search{
-	margin: 0;
-}
 /*menu hamburguesa*/
 .menu-wrap{
 	position: fixed;

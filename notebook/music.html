@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/music.css">
+    <title>Music | The Notebook</title>
+</head>
+<body>
+		<!-- navbar -->
+	<nav class="nav">
+		<div class="title">Notebook</div>
+	</nav>
+	<!-- menu hamburguesa -->
+	<div class="menu-wrap">
+		<input type="checkbox" class="toggler">
+		<div class="hamburger"><div></div></div>
+		<div class="menu">
+			<div>
+				<div>
+					<ul>
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="./about.html">Biographic</a></li>
+						<li><a href="./social-media.html">Social Media</a></li>
+						<li><a href="./worldwide-tour.html">Worldwide Tour</a></li>
+						<li><a href="#" id="contact">Contact us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- fin menu hamburguesa -->
+	<section>
+    <div class="album">
+		<p class="txt">01/04</p>
+		
+        <div class="cd">
+			<img src="./album/cd1.png" alt="cd 1" class="cd1">
+			<img src="./album/cover.png" alt="cover" class="cover">
+        </div>
+	</div>
+	
+	</section>
+
+		<!-- contacto modal -->
+		<div class="contact" id="contact2">
+			<div class="close" id="close"><i class="fas fa-times x"></i></div>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" placeholder="Name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" placeholder="Email" required>
+				<label for="option">Subject:</label>
+				<select name="option" id="option">
+					<option value="1" requiered>Booking</option>
+					<option value="2">Interview</option>
+					<option value="3">Join our crazy team</option>
+				</select>
+				<label for="message">Message:</label>
+				<textarea name="subjet" id="subjet" cols="10" rows="10" placeholder="Enter your message"
+					required></textarea><br>
+				<input type="submit" id="submit" value="send">
+			</form>
+		</div>
+		<!-- modal end -->
+<script src="./js/music.js"></script>
+<script src="https://kit.fontawesome.com/bb499b2907.js" crossorigin="anonymous"></script>
+</body>
+</html>
