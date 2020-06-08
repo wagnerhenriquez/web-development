@@ -267,6 +267,10 @@ label{
 #prev,
 #next{
 	cursor: pointer;
+	transition: all .5s ease;
+}
+#prev:hover, #next:hover{
+	color: #5d464f;
 }
 /* fin modal */
 @media all and (max-width: 1200px){
