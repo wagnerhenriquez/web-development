@@ -74,6 +74,7 @@ next.addEventListener('click', () => {
         currentPic = 0
     }
     showSlider(currentPic)
+    pic.animate([{opacity: '0.2'}, {opacity:'1.0'}], {duration: 500, fill: 'forwards'})
 })
 prev.addEventListener('click', () => {
     currentPic--
@@ -81,4 +82,5 @@ prev.addEventListener('click', () => {
        currentPic = slider.length - 1
     }
     showSlider(currentPic)
+    pic.animate([{ opacity: '0.2' }, { opacity: '1.0' }], { duration: 500, fill: 'forwards' })
 })

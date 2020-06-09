@@ -276,6 +276,31 @@ label{
 	font-size: 10px;
 	border-bottom: 1px solid #fff;
 	margin-bottom: 10px;
+	cursor: pointer;
+}
+.volumen01{
+	background-image: url(../album/cd1.png);
+    background-repeat: no-repeat;
+	background-size: cover;
+    height:200px;
+    width:200px;
+	display:block;
+	transition: .5s ease;
+	position: absolute;
+	bottom: 100%;
+	display: none;
+}
+.volumen02{
+	background-image: url(../album/cd2.png);
+    background-repeat: no-repeat;
+	background-size: cover;
+    height:200px;
+    width:200px;
+	display:block;
+	transition: .5s ease;
+	position: absolute;
+	bottom: 100%;
+	display: none;
 }
 .mini-texto p{
 	width: 250px;

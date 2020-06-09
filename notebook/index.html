@@ -88,9 +88,13 @@
 		<!-- mini texto inferior -->
 
 		<div class="mini-texto">
+			<div class="volumen01">
+			</div>
+			<div class="volumen02">
+			</div>
 			<ul>
-				<li>Volumen 01</li>
-				<li>Volumen 02</li>
+				<li class="vol1"><a href="./music.html">Volumen 01</a></li>
+				<li class="vol2"><a href="./music.html">Volumen 02</a></li>
 			</ul>
 			<p>A fashion insight into leading summer styles, travel destinations to may never of thought of, a beginners guide to S&M and much much mor</p>
 		</div>
@@ -140,6 +144,28 @@
 
 	cerrar.addEventListener('click', () => {
 		contact2.style.display = "none"
+	})
+
+	const volumen01 = document.querySelector('.volumen01')
+		const vol1 = document.querySelector('.vol1')
+
+	vol1.addEventListener('mouseover',() => {
+		volumen01.style.display = 'initial'
+		volumen01.animate([{opacity:'0.2'}, {opacity: '1.0'}], {duration: 500, fill: 'forwards'})
+	})
+		vol1.addEventListener('mouseout',() => {
+		volumen01.style.display = 'none'
+	})
+
+	const volumen02 = document.querySelector('.volumen02')
+	const vol2 = document.querySelector('.vol2')
+
+	vol2.addEventListener('mouseover',() => {
+		volumen02.style.display = 'initial'
+		volumen02.animate([{opacity:'0.2'}, {opacity: '1.0'}], {duration: 500, fill: 'forwards'})
+	})
+		vol2.addEventListener('mouseout',() => {
+		volumen02.style.display = 'none'
 	})
 </script>
 <!-- icons -->
