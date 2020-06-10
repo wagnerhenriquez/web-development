@@ -442,7 +442,7 @@ label{
 	background-position: 50%;
 }
 .img01{
-	background: url(../img/image01.jpg);
+	background: url(../img/image03.jpg);
 	background-size: cover;
 	background-position: 50%;
 	width: 350px;
@@ -494,7 +494,7 @@ label{
 	}
 }
 .img02{
-	background: url(../img/image02.jpg);
+	background: url(../img/chica3.jpg);
 	background-size: cover;
 	width: 800px;
 	height: 100vh;

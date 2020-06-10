@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Reindeer</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
 
@@ -22,9 +22,9 @@
 				<div>
 					<div>
 					<ul>
-				<li><a href="#">home.</a></li>
-				<li><a href="#">snow life.</a></li>
-				<li><a href="#">contact.</a></li>
+				<li><a href="./index.html">home.</a></li>
+				<li><a href="./snow-life.html">snow life.</a></li>
+				<li><a href="#" id="contact">Contact us</a></li>
 				<li><a href="#">Facebook.</a></li>
 				<li><a href="#">instagram.</a></li>
 				<li><a href="#">Twitter.</a></li>
@@ -46,9 +46,9 @@
 
 		<nav class="nav">
 			<ul>
-				<li><a href="#">home.</a></li>
-				<li><a href="#">snow life.</a></li>
-				<li><a href="#">contact.</a></li>
+				<li><a href="./index.html">home.</a></li>
+				<li><a href="./snow-life.html">snow life.</a></li>
+				<li><a href="#" id="contactdos">Contact us</a></li>
 			</ul>
 		</nav>
 		
@@ -86,11 +86,74 @@
 				<li class="ig">IG</li>
 			</ul>
 		</div>
-
-
 	</div>
-	
-<!-- icons -->
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>	
+
+	<div class="video">
+		<p class="closeVideo">close</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/NrLF_wBVdn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<!-- contacto modal -->
+		<div class="contact" id="contact2">
+			<div class="close" id="close"><i class="fas fa-times x"></i></div>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" placeholder="Name" required>
+				<label for="email">Email:</label>
+				<input type="email" id="email" placeholder="Email" required>
+				<label for="option">Subject:</label>
+				<select name="option" id="option">
+					<option value="1" requiered>Booking</option>
+					<option value="2">Interview</option>
+					<option value="3">Join our crazy team</option>
+				</select>
+				<label for="message">Message:</label>
+				<textarea name="subjet" id="subjet" cols="10" rows="10" placeholder="Enter your message"
+					required></textarea><br>
+				<input type="submit" id="submit" value="send">
+			</form>
+		</div>
+		<!-- modal end -->
+<script>
+    const contacto = document.getElementById('contact')
+    const contactodos = document.getElementById('contact2')
+
+    contact.addEventListener('click', () => {
+        contact2.style.display = "initial"
+    })
+
+    const cerrar = document.getElementById('close')
+
+        cerrar.addEventListener('click', () => {
+            contact2.style.display = "none"
+        })
+
+		
+    contactdos.addEventListener('click', () => {
+        contact2.style.display = "initial"
+    })
+
+        cerrar.addEventListener('click', () => {
+            contact2.style.display = "none"
+        })
+
+	const watch = document.querySelector('.watchnow')
+	const video = document.querySelector('.video')
+	const closeVideo = document.querySelector('.closeVideo')
+
+	watch.addEventListener('click', () => {
+		video.style.display = 'initial'
+		video.animate([
+			{opacity: '0.2'},
+			{opacity: '1.0'}
+		],{
+			duration: 500, fill: 'forwards'
+		})
+	})
+	closeVideo.addEventListener('click', () => {
+		video.style.display = 'none'
+	})
+</script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="https://kit.fontawesome.com/bb499b2907.js" crossorigin="anonymous"></script>	
 </body>
 </html>

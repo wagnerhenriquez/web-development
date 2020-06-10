@@ -147,10 +147,14 @@ a{
 }
 .nav ul li{
 	color: #494949;
+	transition: .5s ease;
 }
 .nav ul li:hover{
 	color: #fff;
 	background: #494949;
+}
+.nav ul li a{
+	transition: .5s ease;
 }
 .nav ul li a:hover{
 	color: #fff;
@@ -354,6 +358,7 @@ a{
 	height: 100px;
 	background: #FFEB00;
 	animation: watchnow 2.2s ease-in-out;
+	cursor: pointer;
 }
 .fa{
 	position: relative;
@@ -405,6 +410,8 @@ a{
 }
 .redes ul li{
 	padding: 10px;
+	transition: .5s ease;
+	cursor: pointer;
 }
 .fb:hover{
 	background: #FFEB00;
@@ -546,6 +553,89 @@ a{
 .circle2 span{
 	left: -100px;
 }
+.video{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	z-index: 10;
+	display: none;
+}
+.closeVideo{
+	text-align: right;
+    font-size: 2rem;
+	background: #FFEB00;
+	color: #494949;
+    text-transform: uppercase;
+	padding: 0 10px;
+	cursor: pointer;
+}
+/* inicio contact modal */
+.contact{
+	width: 70%;
+	background-color: #292525;
+	border: 1px solid #fff;
+	padding: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10000;
+	display: none;
+	
+}
+.close{
+	font-size: 3rem;
+	text-align: right;
+	color: #fff;
+}
+form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+input, select{
+	width: 100%;
+	height: 50px;
+	background: rgba(196, 175, 239, 0.15);
+	color: #fff;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+	transition: .5s;
+}
+input:hover{
+	background: #060604;
+}
+select{
+	background-color: #403943 !important;
+	
+}
+textarea{
+	width: 100%;
+	padding: 5px;
+	background: rgba(196, 175, 239, 0.15);
+	color: #fff;
+	border: none;
+}
+input::placeholder, textarea::placeholder{
+	color: #fff;
+}
+label{
+	padding: 5px;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.x{
+	font-size: 4rem;
+	position: relative;
+	top: 0;
+	transition: .5s ease;
+	display: none;
+	cursor: pointer;
+}
+/* fin modal */
 /*mediasq*/
 @media all and (max-width: 1430px){
 	.watchnow{
@@ -663,6 +753,26 @@ a{
 		bottom: 95px;
 		right: 60px;
 	}
+	.video iframe{
+		width: 500px;
+	}
+}
+@media all and (max-height: 568px){
+    .close{
+        font-size: 0;
+    }
+    label{
+        padding: 0;
+    }
+    input, select{
+        height: auto;
+    }
+    textarea{
+        height: 50px;
+    }
+    .x{
+        font-size: 1.5rem;
+	}
 }
 @media all and (max-width: 520px){
 	.wrapper{
@@ -676,6 +786,9 @@ a{
 	.titulo p{
 		margin-top: 60px;
 		right: 40px;
+	}
+	.video iframe{
+		width: 400px;
 	}
 }
 @media all and (max-width: 488px){
@@ -710,6 +823,15 @@ a{
 	    text-align: justify;
 	    width: 155px;
 	}
+	.watchnow{
+		top: 75%;
+	}
+	.video{
+		top: 75%;
+	}
+	.video iframe{
+		width: 320px;
+	}
 }
 @media all and (max-width: 360px){
 	.ellipse-container{
@@ -724,6 +846,17 @@ a{
 	}
 	}
 @media all and (max-width: 330px){
+	.titulo{
+		top: 10%;
+	}
+	@keyframes titulo{
+		0%{
+			top: -25%;
+		}
+		100%{
+			top: 10%;
+		}
+	}
 	.titulo h1{
 		right: 40px;
 	}
@@ -738,4 +871,16 @@ a{
 		top: 5px;
 		left: 5px;
 	}
+}
+@media all and (max-width: 320px){
+	.video{
+		top: 125%;
+	}
+		input, 
+		select{
+			height: auto;
+		}
+		textarea{
+			height: 80px;
+		}
 }
