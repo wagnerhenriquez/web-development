@@ -46,6 +46,7 @@
 		</div>
         <!-- fin del menu hamburguesa -->
         <!-- form -->
+    <main class="main">
         <div class="form">
             <form id="form">
                 <div class="cat">
@@ -60,15 +61,19 @@
                 <button class="login">Log in</button>
             </form>
         </div>
+    </main>
 
 
 <script>
+
+    // id
     const password = document.getElementById('password')
     const $l = document.querySelector('.left-arm')
     const $r = document.querySelector('.right-arm')
     const form = document.querySelector('.form')
+    const main = document.querySelector('.main')
 
-if(password.addEventListener){
+    //first event
         password.addEventListener('click', () => {
         $l.style.transform = 'translate(-120%, -185%)rotate(-195deg) skewX(-20deg)'
         $l.animate([
@@ -79,18 +84,35 @@ if(password.addEventListener){
         $r.animate([
             {transition: '0.5s ease'}
         ], {duration: 500, fill: 'forwards'})
-    }) 
-} else{
-    alert('!!')
-}
+    })
+    // second event
+function uncoverRArm(){  
+        $r.style.transform = 'translate(10%, -110%)'
+        $r.animate([
+            {transition: '0.5s ease'}
+        ], {duration: 500, fill: 'forwards'})    
+    }
+   form.addEventListener('click', function(e){
+       if(event.target.matches('.form')) 
+       uncoverRArm()
+   })
+    //third event
+    function uncoverEyes(){  
+        $r.style.transform = 'translate(10%, -110%)'
+        $r.animate([
+            {transition: '0.5s ease'}
+        ], {duration: 500, fill: 'forwards'})
+        $l.style.transform = 'translate(-120%, -110%)'
+        $l.animate([
+            {transition: '0.5s ease'}
+        ], {duration: 500, fill: 'forwards'}) 
+    }
 
+   main.addEventListener('click', function(e){
+       if(event.target.matches('.main')) 
+       uncoverEyes()
+   })
 
-    // form.addEventListener('click', () => {
-    //     $r.style.transform = 'translate(10%, -110%)'
-    //     $r.animate([
-    //         {transition: '0.5s ease'}
-    //     ], {duration: 500, fill: 'forwards'})
-    // })
 
 
     
