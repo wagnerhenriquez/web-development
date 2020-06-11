@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Tema8 - practica</title>
+	<link rel="stylesheet" href="./login.css">
+</head>
+<body>
+	<nav class="nav">
+		<div class="logo"><a href="./index.html">clean juicy</a></div>
+		<ul class="lista-1024">
+			<li><a href="#">locations</a></li>
+			<li><a href="#">blog</a></li>
+			<li><a href="#">meet our team</a></li>
+			<li><a href="#">shop</a></li>
+			<li><a href="#">contact us</a></li>
+		</ul>
+		
+			<ul class="lista-1024">
+				<li><a href="#">register</a></li>
+				<li><a href="./login.html">login</a></li>
+			</ul>
+	</nav>
+	<!-- menu hamburguesa movile -->	
+	<div class="menu-wrap"> <!-- contenedor principal --> 
+		<input type="checkbox" class="toggler"> <!-- contenedor del input tipo checkbox -->
+		<div class="hamburger"><!-- La hamburguesa, su tamano definira el tamano de las lineas -->
+			<div><!-- este primer div vacio es la linea central --></div></div>
+		<div class="menu"> <!-- para poner todos los links del menu en el centro, incluyendo los 2 div vacios -->
+			<div>
+				<div>
+					<ul>
+			<li><a href="#">locations</a></li>
+			<li><a href="#">blog</a></li>
+			<li><a href="#">meet our team</a></li>
+			<li><a href="#">shop</a></li>
+			<li><a href="#">contact us</a></li>
+			<li><a href="#">register</a></li>
+			<li><a href="#">login</a></li>
+					</ul>	
+					</div>
+				</div>
+			</div>
+		</div>
+        <!-- fin del menu hamburguesa -->
+        <!-- form -->
+        <div class="form">
+            <form id="form">
+                <div class="cat">
+                    <img src="./img/cat.png" alt="cat-login">
+                    <img src="./img/cat-arm-left.png" alt="cat-login" class="left-arm">
+                    <img src="./img/cat-arm-right.png" alt="cat-login" class="right-arm">
+                </div>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="email@domain.com">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <button class="login">Log in</button>
+            </form>
+        </div>
+
+
+<script>
+    const password = document.getElementById('password')
+    const $l = document.querySelector('.left-arm')
+    const $r = document.querySelector('.right-arm')
+    const form = document.querySelector('.form')
+
+if(password.addEventListener){
+        password.addEventListener('click', () => {
+        $l.style.transform = 'translate(-120%, -185%)rotate(-195deg) skewX(-20deg)'
+        $l.animate([
+            {transition: '0.5s ease'}
+        ], {duration: 500, fill: 'forwards'})
+
+        $r.style.transform = 'translate(10%, -200%)rotate(185deg) skewX(30deg)'
+        $r.animate([
+            {transition: '0.5s ease'}
+        ], {duration: 500, fill: 'forwards'})
+    }) 
+} else{
+    alert('!!')
+}
+
+
+    // form.addEventListener('click', () => {
+    //     $r.style.transform = 'translate(10%, -110%)'
+    //     $r.animate([
+    //         {transition: '0.5s ease'}
+    //     ], {duration: 500, fill: 'forwards'})
+    // })
+
+
+    
+
+</script>
+<script src="https://kit.fontawesome.com/bb499b2907.js" crossorigin="anonymous"></script>
+</body>
+</html>

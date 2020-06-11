@@ -10,9 +10,6 @@ a{
 	text-decoration: none;
 	color: #000;
 }
-body{
-
-}
 
 .nav{
 	padding: 20px;
@@ -205,55 +202,41 @@ body{
 }
 .flecha-izq{
 	position: absolute;
-    left: 40px;
+    left: 100px;
     top: 50%;
     font-size: 2rem;
-    border-style: solid;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    transform: rotate(90deg);
-    font-family: cursive;
     opacity: .5;
-    padding: 3px 0 0 20px;
-    animation: flecha-iz 0.8s ease infinite;
+    animation: flecha-iz 1.8s ease infinite;
 }
 
 .flecha-der{
 	position: absolute;
-    right: 40px;
+    right: 100px;
     top: 50%;
     font-size: 2rem;
-    border-style: solid;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    transform: rotate(-90deg);
-    font-family: cursive;
     opacity: .5;
-    padding: 3px 0 0 18px;
-    animation: flecha-de 0.8s ease infinite;
+    animation: flecha-de 1.8s ease infinite;
 }
 @keyframes flecha-iz{
 	0%{
-		padding: 3px 0 0 20px;
+		left: 100px;
 	}
 	65%{
-		padding: 5px 0 0 20px;
+		left: 110px;
 	}
 	100%{
-		padding: 3px 0 0 20px;
+		left: 100px;
 	}
 }
 @keyframes flecha-de{
 	0%{
-		padding: 3px 0 0 18px;
+		right: 100px;
 	}
 	65%{
-		padding: 5px 0 0 18px;
+		right: 110px;
 	}
 	100%{
-		padding: 3px 0 0 18px;
+		right: 100px;
 	}
 }
 /*menu hamburguesa*/
@@ -493,26 +476,6 @@ body{
 		bottom: -280px;
 	}
 }
-@media all and (max-width: 500px){
-	.flecha-izq, .flecha-der{
-		border-style: none;
-	}
-	.flecha-der{
-		padding: 3px 0 0 24px;
-
-	}
-	@keyframes flecha-de{
-	0%{
-		padding: 3px 0 0 24px;
-	}
-	65%{
-		padding: 5px 0 0 24px;
-	}
-	100%{
-		padding: 3px 0 0 24px;
-	}
-}
-}
 @media all and (max-width: 420px){
 	.flecha-izq{
 		left: 20%;
@@ -565,5 +528,6 @@ body{
 @media all and (max-width: 320px){
 	.flecha-izq, .flecha-der{
 		top: 85%;
+	}
 	}
 }
