@@ -12,6 +12,7 @@
 		<div class="logo"><a href="./index.html">clean juicy</a></div>
 		<ul class="lista-1024">
 			<li><a href="#">locations</a></li>
+			<li><a href="#">our menu</a></li>
 			<li><a href="#">blog</a></li>
 			<li><a href="#">meet our team</a></li>
 			<li><a href="#">shop</a></li>
@@ -33,6 +34,7 @@
 				<div>
 					<ul>
 			<li><a href="#">locations</a></li>
+			<li><a href="#">our menu</a></li>
 			<li><a href="#">blog</a></li>
 			<li><a href="#">meet our team</a></li>
 			<li><a href="#">shop</a></li>
@@ -47,77 +49,32 @@
         <!-- fin del menu hamburguesa -->
         <!-- form -->
     <main class="main">
+		<!-- form -->
         <div class="form">
             <form id="form">
                 <div class="cat">
                     <img src="./img/cat.png" alt="cat-login">
                     <img src="./img/cat-arm-left.png" alt="cat-login" class="left-arm">
-                    <img src="./img/cat-arm-right.png" alt="cat-login" class="right-arm">
-                </div>
+					<img src="./img/cat-arm-right.png" alt="cat-login" class="right-arm">
+				</div>
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="email@domain.com">
+                <input type="email" id="email" placeholder="email@domain.com" required>
+                <i class="fas fa-user"></i>
                 <label for="password">Password</label>
                 <input type="password" id="password">
-                <button class="login">Log in</button>
+				<i class="fas fa-eye" id="eye"></i>
+				<div class="login-info">
+				<label for="rememberMe"><input type="checkbox" id="rememberMe">Keep me signed in</label>
+				<p><a href="#" class="forgot">Forgot password?</a></p>
+				</div>
+				<button class="login">Log in</button>
+				<p class="sign-p">Don't have an account? <a href="#" class="sign">Sign up here</a></p>
             </form>
-        </div>
+		</div>
+		<!-- form end -->
     </main>
 
-
-<script>
-
-    // id
-    const password = document.getElementById('password')
-    const $l = document.querySelector('.left-arm')
-    const $r = document.querySelector('.right-arm')
-    const form = document.querySelector('.form')
-    const main = document.querySelector('.main')
-
-    //first event
-        password.addEventListener('click', () => {
-        $l.style.transform = 'translate(-120%, -185%)rotate(-195deg) skewX(-20deg)'
-        $l.animate([
-            {transition: '0.5s ease'}
-        ], {duration: 500, fill: 'forwards'})
-
-        $r.style.transform = 'translate(10%, -200%)rotate(185deg) skewX(30deg)'
-        $r.animate([
-            {transition: '0.5s ease'}
-        ], {duration: 500, fill: 'forwards'})
-    })
-    // second event
-function uncoverRArm(){  
-        $r.style.transform = 'translate(10%, -110%)'
-        $r.animate([
-            {transition: '0.5s ease'}
-        ], {duration: 500, fill: 'forwards'})    
-    }
-   form.addEventListener('click', function(e){
-       if(event.target.matches('.form')) 
-       uncoverRArm()
-   })
-    //third event
-    function uncoverEyes(){  
-        $r.style.transform = 'translate(10%, -110%)'
-        $r.animate([
-            {transition: '0.5s ease'}
-        ], {duration: 500, fill: 'forwards'})
-        $l.style.transform = 'translate(-120%, -110%)'
-        $l.animate([
-            {transition: '0.5s ease'}
-        ], {duration: 500, fill: 'forwards'}) 
-    }
-
-   main.addEventListener('click', function(e){
-       if(event.target.matches('.main')) 
-       uncoverEyes()
-   })
-
-
-
-    
-
-</script>
+<script src="./js/app.js"></script>
 <script src="https://kit.fontawesome.com/bb499b2907.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+}
+body{
+	overflow: hidden;
 }
 ul{
 	list-style: none;
@@ -179,6 +183,7 @@ a{
     border: solid 1px #DDD;
     border-radius: .5em;
     font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 40px, rgba(0, 0, 0, 0.1) 0 5px 10px;
 }
 #form{
     display: flex;
@@ -192,7 +197,7 @@ a{
 .right-arm{
     width: 50px !important;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(10%, -110%);
     transition: .5s ease;
@@ -212,7 +217,7 @@ a{
 .left-arm{
     width: 50px !important;
     position: absolute;
-    top: 50%;
+    top: 46%;
     left: 50%;
     transform: translate(-120%, -110%);
     transition: .5s ease;
@@ -257,7 +262,44 @@ input{
 .login:hover{
     background: #ff4803;
 }
-
+.fas {
+    right: 1rem;
+    position: absolute;
+    top: 57%;
+    left: 80%;
+    color: darkgrey;
+}
+.fa-eye{
+    right: 1rem;
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    color: darkgrey;
+    cursor: pointer;   
+}
+.login-info{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#rememberMe{
+	margin: 0 10px 0 0;
+}
+.forgot:hover{
+	text-decoration: underline;
+}
+.sign-p{
+	text-align: center;
+	margin: 10px 0;
+}
+.sign{
+	color:#ea5f2b;
+	transition: .5s ease;
+}
+.sign:hover{
+	color: #ff4803;
+	text-decoration: underline;
+}
 
 
 @media all and (max-width: 1024px){
