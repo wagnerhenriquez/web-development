@@ -38,7 +38,7 @@ a{
 	position: fixed;
 	top: 0;
 	right: 20px;
-	z-index: 1;
+	z-index: 100;
 	display: none;
 }
 .menu-wrap .toggler{ /*ajusto el input, su tamano y oculto el checkbox*/
@@ -190,7 +190,7 @@ a{
     width: 50px !important;
     position: absolute;
     top: 45%;
-    left: 50%;
+    left: 53%;
     transform: translate(10%, -110%);
     transition: .5s ease;
     animation: cat-r-a 3s ease;
@@ -210,7 +210,7 @@ a{
     width: 50px !important;
     position: absolute;
     top: 46%;
-    left: 50%;
+    left: 52%;
     transform: translate(-120%, -110%);
     transition: .5s ease;
     animation: cat-l-a 4s ease;
@@ -292,7 +292,9 @@ input{
 	color: #ff4803;
 	text-decoration: underline;
 }
-
+.cat{
+	align-self: center;
+}
 
 @media all and (max-width: 1024px){
     .lista-1024{
@@ -305,5 +307,127 @@ input{
 	}
 	.menu-wrap{
 		display: initial;
+	}
+}
+@media all and (max-width: 460px){
+	.form {
+		border: none;
+		box-shadow: none;
+	}
+		.nav{
+		position: relative;
+		z-index: 10;
+	}
+}
+@media all and (max-width: 397px){
+	.right-arm{
+		left: 52%;
+	}
+	.left-arm{
+		top: 45%;
+		left: 52%;
+	}
+}
+@media all and (max-width: 381px){
+	.right-arm{
+		left: 55%;
+	}
+}
+@media all and (max-width: 363px){
+	#form img{
+		width: 260px;
+	}
+	.left-arm{
+		left: 50%;
+		top: 42%;
+		width: 43px !important;
+	}
+	.right-arm{
+		left: 53%;
+		top: 42%;
+		width: 43px !important;
+	}
+	.fas{
+		top: 54.5%;
+	}
+	#eye{
+		top: 68%;
+	}
+}
+@media all and (max-width: 357px){
+	.right-arm{
+		left: 53%;
+	}
+	.rememberMe,
+	.forgot{
+		font-size: .8rem;
+	}
+}
+@media all and (max-width: 350px){
+	.fas{
+		top: 54.5%;
+	}
+
+}
+@media all and (max-width: 343px){
+	.left-arm{
+		left: 52%;
+	}
+}
+@media all and (max-width: 338px){
+	.right-arm{
+		left: 55%;
+	}
+	.sign-p{
+		font-size: .8rem;
+	}
+	.fas{
+		top: 54.5%;
+	}
+	#eye{
+		top: 68.5%;
+	}
+}
+@media all and (max-width: 324px){
+	#form img{
+		width: 160px;
+	}
+	.left-arm{
+		width: 26px !important;
+		top: 34%;
+	}
+	.right-arm{
+		width: 26px !important;
+		top: 34%;
+		left: 52%;
+	}
+	.fas{
+		top: 46.5%;
+		left: 75%;
+	}
+	#eye{
+		top: 63.5%;
+	}
+}
+@media all and (max-height: 414px){
+	.cat{
+		display: none;
+	}
+	.form{
+		border: none;
+		box-shadow: none;
+	}
+	.fas{
+		top: 23.5%;
+	}
+	#eye{
+		top: 47%;
+	}
+	.menu-wrap .menu > div > div ul > li{
+		font-size: 1rem;
+		padding: .5rem;
+	}
+	.menu-wrap .menu > div{
+		width: 250vh;
 	}
 }

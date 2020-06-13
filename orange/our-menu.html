@@ -49,7 +49,7 @@
 		</div>
         <!-- fin del menu hamburguesa -->
         <main class="main">
-            <div class="header">
+            <div class="header" id="header">
                 <h1>menu</h1>
             </div>
             <!-- section 1 -->
@@ -190,12 +190,12 @@
                     <div class="bowls-3">
                         <img src="./img/toast/toast2.jpg">
                         <p>the avocado toast</p>
-                        <p>Organic Avocado, Organic Lemon, Organic Olive Oil, Organic Red Pepper Flakes, Pink Sea Salt</p>
+                        <p>Organic Avocado, Organic Lemon, Organic Olive Oil, Organic Red Pepper Flakes</p>
                     </div>
                     <div class="bowls-3">
                         <img src="./img/toast/toast3.jpg" alt="the nutty bowl">
                         <p>the hummus toast</p>
-                        <p>Organic Sprouted Grain Bread, Organic Hummus, Organic Cucumber, Organic Feta, Organic Red Pepper Flakes, Organic Lemon Juice *gluten free bread available upon request*</p>
+                        <p>Organic Sprouted Grain Bread, Organic Hummus, Organic Cucumber, Organic Feta</p>
                     </div>
                 </div>
             </section>
@@ -208,12 +208,12 @@
                     <div class="bowls-2">
                         <img src="./img/bottles/bottle1.jpg" alt="the berry bowl">
                         <p>gold</p>
-                        <p>Filtered Water, Himalayan Pink Sea Salt, Organic Black Pepper, Organic Cashews, Organic Cinnamon, Organic Maple Syrup, Organic Turmeric, Organic Vanilla</p>
+                        <p>Organic Vanilla, Organic Cucumber, Organic Kale, Organic Mint, Organic Spinach</p>
                     </div>
                     <div class="bowls-2">
                         <img src="./img/bottles/bottle2.jpg" alt="the beach bowl">
                         <p>cacao milk</p>
-                        <p>Himalayan Pink Sea Salt, Organic Cacao, Organic Cashews, Organic Cinnamon, Organic Maple Syrup, Organic Vanilla</p>
+                        <p>Organic Cacao, Organic Cucumber, Organic Kale, Organic Mint, Organic Spinach</p>
                     </div>
                     <div class="bowls-2">
                         <img src="./img/bottles/bottle3.jpg" alt="the nutty bowl">
@@ -315,7 +315,7 @@
                 </div>
             </section>
             <!-- section 9 -->
-                        <section class="acai-bowls" id="kids">
+            <section class="acai-bowls" id="kids">
                 <div class="title-h3">
                     <h2><a href="#kids">kids menu</a></h2>
                 </div>
@@ -337,7 +337,71 @@
                     </div>
                 </div>
             </section>
+            <!-- section 10 -->
+            <section class="greenoa" id="wraps">
+                <div class="title-h2">
+                    <h2><a href="#wraps">wraps</a></h2>
+                </div>
+                <div class="bowls-grid">
+                    <div class="bowls-2">
+                        <img src="./img/wraps/wrap1.jpg" alt="the berry bowl">
+                        <p>thebbq wrap</p>
+                        <p>Toasted Flatbread Wrap, Organic Chicken, Organic Cheddar Cheese, Organic Tomato, Organic Spinach, Himalayan Pink Sea Salt, & Tessemae’s Sweet and Spicy BBQ Sauce</p>
+                    </div>
+                    <div class="bowls-2">
+                        <img src="./img/wraps/wrap2.jpg">
+                        <p>the cali wrap</p>
+                        <p>Toasted Flatbread Wrap, Organic Avocado, Organic Provolone Cheese, Organic Chicken, Organic Spinach, Organic Tomato, Organic Garlic & Himalayan Pink Sea Salt</p>
+                    </div>
+                    <div class="bowls-2">
+                        <img src="./img/wraps/wrap3.jpg" alt="the nutty bowl">
+                        <p>the garden wrap</p>
+                        <p>Gluten-Free Wrap, Organic Spicy Avocado Hummus, Organic Quinoa, Organic Cucumber, Organic Carrot, Organic Red Pepper Flakes & Tessemae’s Organic Green Goddess Dressing – Served Cold</p>
+                    </div>
+                </div>
+            </section>
+            <!-- section 11 -->
+            <section class="grid">
+                <img src="./img/toast/toast2.jpg" alt="toast">
+                <img src="./img/acai-bowls/bowl6.jpg" alt="organic is the new black">
+                <img src="./img/smoothies/smoothie2.jpg" alt="smoothie">
+                <img src="./img/acai-bowls/bowl3.jpg" alt="acai bowl">
+            </section>
+            <!-- nav lat -->
+            <div class="nav-lateral">
+                <ul>
+                    <li><a href="#header"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#acai-bowls"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#greenoa"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#seasonal"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#juices"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#toast"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#bottles"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#cold-pressed"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#smoothies"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#kids"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#wraps"><i class="far fa-circle"></i></a></li>
+                </ul>
+            </div>
+            <!-- footer -->
+            <footer class="footer">
+                <div class="author">
+                    <p>© 2020 Clean Juice. All Rights Reserved</p>
+                </div>
+            </footer>
         </main>
-    
+<script>
+    const nav = document.querySelector('.nav')
+    const bowl = document.getElementById('acai-bowls')
+
+    window.addEventListener('scroll', () => {
+        if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
+            nav.style.background = '#fff'
+        } else if(document.body.scrollTop < 400 || document.documentElement.scrollTop < 400){
+            nav.style.background = 'none'
+        }
+    })
+</script>
+<script src="https://kit.fontawesome.com/bb499b2907.js" crossorigin="anonymous"></script>
 </body>
 </html>
