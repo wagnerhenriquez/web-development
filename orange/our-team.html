@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./our-team.css">
     <link rel="stylesheet" href="./js/jqvmap.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -13,14 +14,14 @@
 </head>
 <body>
 	<nav class="nav">
-		<div class="logo"><a href="./index.html">clean juicy</a></div>
+		<div class="logo"><a href="./styles/index.html">clean juicy</a></div>
 		<ul class="lista-1024">
 			<li><a href="#">locations</a></li>
 			<li><a href="./our-menu.html">our menu</a></li>
 			<li><a href="#">blog</a></li>
 			<li><a href="#">meet our team</a></li>
 			<li><a href="#">shop</a></li>
-			<li><a href="#">contact us</a></li>
+			<li><a href="./contact.html">contact us</a></li>
 		</ul>
 		
 			<ul class="lista-1024">
@@ -43,7 +44,7 @@
 			<li><a href="#">blog</a></li>
 			<li><a href="#">meet our team</a></li>
 			<li><a href="#">shop</a></li>
-			<li><a href="#">contact us</a></li>
+			<li><a href="./contact.html">contact us</a></li>
 			<li><a href="#">register</a></li>
 			<li><a href="./login.html">login</a></li>
 					</ul>	
@@ -144,7 +145,134 @@
             <p>total franchises<br> awarded since 2016</p>
         </div>
     </section>
-            <div id="vmap" style="width: 600px; height: 400px;"></div>
+    <div class="map-text">
+        <h2>we are all over the map!</h2>
+    </div>
+    <div class="areas">
+        <div class="green">
+            <p><span></span><span class="separator"></span>Available markets</p>
+        </div>
+        <div class="green">
+            <p><span class="dos"></span><span class="separator"></span>No available markets</p>
+        </div>
+    </div>
+    <!-- map -->
+    <div id="vmap" style="width: 100%; height: 400px; text-align: center;"></div>
+    <!-- section 8 -->
+    <section class="who txt-form">
+        <div class="map-text">
+            <h2>don't you see your market? <a href="#form" class="link">contact us</a> for more details</h2>
+        </div>
+    </section>
+    <!-- section 9 / form -->
+    <section class="who" id="form">
+        <form class="form">
+            <label for="name">First Name <span class="ast">*</span></label>
+            <input type="text" id="name" required>
+            <label for="last-name">Last Name <span class="ast">*</span></label>
+            <input type="text" id="last-name" required>
+            <label for="email">Email <span class="ast">*</span></label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone <span class="ast">*</span></label>
+            <input type="cel" id="phone" required>
+            <label for="state">State <span class="ast">*</span></label>
+            <select id="state" required>
+                <option disabled selected value>State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+            <label for="whatCity">In what City would you like to open a Clean Juice location? <span class="ast">*</span></label>
+            <input type="text" id="whatCity" required>
+            <label for="howDidYouFind">How Did You First Hear About Clean Juice? <span class="ast">*</span></label>
+            <select id="howDidYouFind" required>
+                <option value="online">Online research</option>
+                <option value="in-store">In-store visit</option>
+                <option value="regularCustomer">I am a regular customer</option>
+                <option value="facebook">Facebook</option>
+                <option value="instagram">Instagram</option>
+                <option value="linkedin">Linkedin</option>
+                <option value="magazine">American Way Magazine/Website</option>
+                <option value="referral">Referral</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="financials">Let's talk financials! Our Clean Juice Financial Requirements are a minimum net worth of 500k and 120k of that in liquid capital. Do you meet these requirements? <span class="ast">*</span></label>
+            <select id="financials" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="about-you">Tell Us About Yourself! <span class="ast">*</span></label>
+            <textarea id="about-you" cols="30" rows="10"></textarea>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </section>
+    <!-- form end -->
+    <!-- section 10 -->
+    <section class="family">
+    </section>
+    <!-- section 11 -->
+    <section class="who">
+        <div class="who-we-are">
+            <p class="logo-text">This web site and the franchise sales information on this site do not constitute an offer to sell a franchise. The offer of a franchise can only be made through the delivery of a franchise disclosure document. Certain states require that we register the franchise disclosure document in those states. The communications on this web site are not directed by us to the residents of any of those states. Moreover, we will not offer or sell franchises in those states until we have registered the franchise (or obtained an applicable exemption from registration) and delivered the franchise disclosure document to the prospective franchisee in compliance with applicable law.</p>
+        </div>
+        <div class="img logo2">
+            <img src="./img/team/member-logo.png" alt="who we are" class="logo">
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="author">
+            <p>© 2020 Clean Juice, LLC. All Rights Reserved | Privacy Policy | Terms & Conditions | Sitemap</p>
+        </div>
+    </footer>
 
 
 <script>
@@ -158,9 +286,9 @@
             selectedColor: null,
             hoverColor: null,
             colors: {
-                mo: '#2980b9',
-                fl: '#27ae60',
-                or: '#8e44ad'
+                nd: 'gray',
+                sd: 'gray',
+                va: 'gray'
             },
             onRegionClick: function(event, code, region){
                 event.preventDefault();

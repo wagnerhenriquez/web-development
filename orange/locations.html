@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./js/leaflet/leaflet.css" crossorigin=""/>
+    <script src="./js/leaflet/leaflet.js"></script>
+	<link rel="stylesheet" href="./locations.css">
+    <title>Locations | Find the Clean Juice near you</title>
+</head>
+<body>
+    <!-- menu -->
+    	<nav class="nav">
+		<div class="logo"><a href="./index.html">clean juicy</a></div>
+		<ul class="lista-1024">
+			<li><a href="#">locations</a></li>
+			<li><a href="./our-menu.html">our menu</a></li>
+			<li><a href="#">blog</a></li>
+			<li><a href="./our-team.html">meet our team</a></li>
+			<li><a href="#">shop</a></li>
+			<li><a href="./contact.html">contact us</a></li>
+		</ul>
+		
+			<ul class="lista-1024">
+				<li><a href="#">register</a></li>
+				<li><a href="./login.html">login</a></li>
+			</ul>
+	</nav>
+	<!-- menu hamburguesa movile -->	
+	<div class="menu-wrap"> 
+    <!-- contenedor principal --> 
+		<input type="checkbox" class="toggler"> <!-- contenedor del input tipo checkbox -->
+		<div class="hamburger"><!-- La hamburguesa, su tamano definira el tamano de las lineas -->
+			<div><!-- este primer div vacio es la linea central --></div></div>
+		<div class="menu"> <!-- para poner todos los links del menu en el centro, incluyendo los 2 div vacios -->
+			<div>
+				<div>
+					<ul>
+			<li><a href="#">locations</a></li>
+			<li><a href="./our-menu.html">our menu</a></li>
+			<li><a href="#">blog</a></li>
+			<li><a href="./our-team.html">meet our team</a></li>
+			<li><a href="#">shop</a></li>
+			<li><a href="./contact.html">contact us</a></li>
+			<li><a href="#">register</a></li>
+			<li><a href="./login.html">login</a></li>
+					</ul>	
+					</div>
+				</div>
+			</div>
+	</div>
+	<!-- end menu hamburguesa -->
+	<section class="locations">
+		<div class="title">
+			<h1>locations</h1>
+		</div>
+		<div class="map-">
+			<h2>find your clean juice!</h2>
+			<p>Please note that many of our locations have altered hours in response to state and local regulations regarding covid-19. We recommend calling your local store for the most accurate hours.</p>
+		</div>
+	<!-- map -->
+	<div class="map-info">
+		<div class="list">
+			<ul>
+				<li><div class="map-list">
+					<p>Clean Juice Uptown</p>
+					<p class="sub-p">201 South Tryon, Ste 120-B</p>
+					<p class="sub-p">Charlotte NC 28202</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(980) 355-0388</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice South End</p>
+					<p class="sub-p">1616 Camden Road, Suite 130</p>
+					<p class="sub-p">Charlotte NC 28203</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(980) 299-8985</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Myers Park</p>
+					<p class="sub-p">2927 Selwyn Ave</p>
+					<p class="sub-p">Charlotte NC 28209</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(980) 218-9296</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Matthews</p>
+					<p class="sub-p">2225 – H Matthews Township Parkway</p>
+					<p class="sub-p">Matthews NC 28105</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(704) 321-2828</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Fishers</p>
+					<p class="sub-p">11670 Commercial Drive Suite 500</p>
+					<p class="sub-p">Fishers IN 46038</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(704) 321-2828</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice New Albany</p>
+					<p class="sub-p">6318 E Dublin Granville Rd</p>
+					<p class="sub-p">Westerville OH 43081</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(888) 614-KALE</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice East Liberty</p>
+					<p class="sub-p">5829 Penn Avenue</p>
+					<p class="sub-p">Pittsburgh PA 15206</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(412) 404-7007</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Sandy Springs</p>
+					<p class="sub-p">6125 Roswell Road Suite 1050</p>
+					<p class="sub-p">Sandy Springs GA 30328</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(404) 405-3230</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Greystone</p>
+					<p class="sub-p">6215 Tattersall Blvd</p>
+					<p class="sub-p">Hoover AL 35242</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(402) 305-3299</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Locust Point</p>
+					<p class="sub-p">1706 Whetstone Way</p>
+					<p class="sub-p">Baltimore MD 21230</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(443) 438-4669</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Twickenham</p>
+					<p class="sub-p">309 Pelham Ave SW B-1</p>
+					<p class="sub-p">Huntsville AL 35801</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(256) 970-4145</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Turkey Creek</p>
+					<p class="sub-p">11670 Parkside Drive</p>
+					<p class="sub-p">Knoxville TN 37934</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(865) 671-5670</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Wynnewood</p>
+					<p class="sub-p">50 East Wynnewood Road Store 9</p>
+					<p class="sub-p">Wynnewood PA 19096</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(484) 417-6291</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice West Ashley</p>
+					<p class="sub-p">975 Savannah Hwy #109</p>
+					<p class="sub-p">Charleston SC 29407</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(854) 222-3152</span></p>
+				</div></li>
+				<li><div class="map-list x">
+					<p>Clean Juice Mayfaire</p>
+					<p class="sub-p">917 Innovation Drive</p>
+					<p class="sub-p">Wilmington NC 28405</p>
+					<p class="sub-p">United States</p>
+					<p class="phone">Phone: <span>(910) 239-9102</span></p>
+				</div></li>
+			</ul>
+		</div>
+		<div id="map"></div>
+	</div>
+	<!-- section by state -->
+		<section class="by">
+		<div class="title2">
+			<h1>locations by state</h1>
+		</div>
+		<div class="locations2">
+			<div class="list1">
+				<ul>
+					<li>Alabama</li>
+					<li>Arizona</li>
+					<li>California</li>
+					<li>Colorado</li>
+					<li>Florida</li>
+					<li>Georgia</li>
+					<li>Idaho</li>
+					<li>Illinois</li>
+					<li>Indiana</li>
+					<li>Louisiana</li>
+				</ul>
+			</div>
+			<div class="list1">
+				<ul>
+					<li>Michigan</li>
+					<li>Nebraska</li>
+					<li>New Jersey</li>
+					<li>North Carolina</li>
+					<li>Ohio</li>
+					<li>Oklahoma</li>
+					<li>Pennsylvania</li>
+					<li>South Carolina</li>
+					<li>Tennessee</li>
+					<li>Texas</li>
+				</ul>
+			</div>
+		</div>
+		</section>
+		<!-- footer -->
+        <footer class="footer">
+                <div class="author">
+                    <p>© 2020 Clean Juice, LLC. All Rights Reserved | Privacy Policy | Terms & Conditions | Sitemap</p>
+                </div>
+        </footer>
+<script>
+  // initialize the map
+var map = L.map('map').setView([38.083, -80.387], 5);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+})
+.addTo(map);
+
+L.marker([35.2036, -80.9256]).addTo(map)
+    .bindPopup('Clean Juice Uptown<br> 201 South Tryon, Ste 120-B<br>Charlotte NC 28202<br><br>Phone: (980) 355-0388')
+    .openPopup();
+L.marker([35.21451, -80.85729]).addTo(map)
+    .bindPopup('Clean Juice South End<br> 1616 Camden Road, Suite 130<br>Charlotte NC 28203<br><br>Phone: (980) 299-8985')
+L.marker([35.22627, -80.84426]).addTo(map)
+    .bindPopup('Clean Juice Myers Park<br> 2927 Selwyn Ave<br>Charlotte NC 28209<br><br>Phone: (980) 218-9296')
+L.marker([35.12754, -80.70252]).addTo(map)
+    .bindPopup('Clean Juice Matthews<br> 2225 – H Matthews Township Parkway<br>Matthews NC 28105<br><br>Phone: (980) 218-9296')
+L.marker([39.95856, -86.01163]).addTo(map)
+    .bindPopup('Clean Juice Fishers<br> 11670 Commercial Drive Suite 500<br>Fishers IN 46038<br><br>Phone: (704) 321-2828')
+L.marker([40.08697, -82.97245]).addTo(map)
+    .bindPopup('Clean Juice New Albany<br> 6318 E Dublin Granville Rd<br>Westerville OH 43081<br><br>Phone: (888) 614-KALE')
+L.marker([41.4251, -75.6499]).addTo(map)
+    .bindPopup('Clean Juice East Liberty<br> 5829 Penn Avenue<br>Pittsburgh PA 15206<br><br>Phone: (412) 404-7007')
+L.marker([33.85516, -84.38267]).addTo(map)
+    .bindPopup('Clean Juice Sandy Springs<br> 6125 Roswell Road Suite 1050<br>Sandy Springs GA 30328<br><br>Phone: (404) 405-3230')
+L.marker([33.42106, -86.66905]).addTo(map)
+    .bindPopup('Clean Juice Greystone<br> 6215 Tattersall Blvd<br>Hoover AL 35242<br><br>Phone: (402) 305-3299')
+L.marker([39.2688, -76.6000]).addTo(map)
+    .bindPopup('Clean Juice Locust Point<br> 1706 Whetstone Way<br>Baltimore MD 21230<br><br>Phone: (443) 438-4669')
+L.marker([34.72323, -86.58309]).addTo(map)
+    .bindPopup('Clean Juice Twickenham<br> 309 Pelham Ave SW B-1<br>Huntsville AL 35801<br><br>Phone: (256) 970-4145')
+L.marker([35.89383, -84.17165]).addTo(map)
+    .bindPopup('Clean Juice Turkey Creek<br> 11670 Parkside Drive<br>Knoxville TN 37934<br><br>Phone: (865) 671-5670')
+L.marker([40.00132, -75.27215]).addTo(map)
+    .bindPopup('Clean Juice Wynnewood<br> 50 East Wynnewood Road Store 9<br>Charleston SC 29407<br><br>Phone: (484) 417-6291')
+L.marker([32.78092, -79.98974]).addTo(map)
+    .bindPopup('Clean Juice West Ashley<br> 50 975 Savannah Hwy #109<br>Charleston SC 29407<br><br>Phone: (854) 222-3152')
+L.marker([34.24216, -77.83135]).addTo(map)
+    .bindPopup('Clean Juice Mayfaire<br> 917 Innovation Drive<br>Wilmington NC 28405<br><br>Phone: (910) 239-9102')
+
+
+</script>
+</body>
+</html>
