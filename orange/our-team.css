@@ -165,19 +165,7 @@ p{
 .menu-wrap .menu > div > div ul > li > a:hover{
 	text-decoration: underline;
 }
-@media all and (max-width: 1024px){
-    .lista-1024{
-		display: none;
-	}
-	.logo{
-		position: absolute;
-		top: 1%;
-		left: 1%;
-	}
-	.menu-wrap{
-		display: initial;
-	}
-}
+
 
 .header{
     background: url(./img/team/team-bg.jpg) no-repeat;
@@ -185,9 +173,10 @@ p{
     background-size: cover;
     height: 100vh;
     width: 100%;
-    position: relative;
+    position: sticky;
     top: 0;
-    left: 0;
+	left: 0;
+	z-index: -88;
 }
 .titulo{
     position: absolute;
@@ -204,7 +193,6 @@ p{
 .titulo p{
     font-size: 3rem;
 	text-transform: uppercase;
-	text-shadow: .8px 0 #fff;
 }
 .btn{
     width: 25%;
@@ -390,7 +378,7 @@ textarea{
 	font-family: 'Open Sans', sans-serif;
 	font-size: .8rem;
 }
-.logo{
+.logo3{
 	width: 200px !important;
 }
 .logo2{
@@ -404,7 +392,6 @@ textarea{
     display: flex;
     justify-content: center;
 	align-items: center;
-	margin: 50px 0 0;
 }
 .footer a{
     color: #fff;
@@ -416,4 +403,107 @@ textarea{
     font-size: 1rem;
     text-align: left;
     color: #a5a2a2;
+}
+.aver{
+	background-color: #fff;
+}
+@media all and (max-width: 1024px){
+    .lista-1024{
+		display: none;
+	}
+	.logo{
+		position: fixed;
+		top: 1%;
+		left: 1%;
+	}
+	.header{
+		background-size: initial !important;
+	}
+	.menu-wrap{
+		display: initial;
+	}
+	.who{
+		width: 80%;
+	}
+	.who img{
+		width: 350px;
+	}
+	.family{
+	background-size: contain;
+    height: 50vh;
+    background-repeat: no-repeat;
+	}
+}
+@media all and (max-width: 768px){
+	.titulo p{
+		font-size: 2rem;
+	}
+	.who img{
+		width: 300px;
+	}
+}
+@media all and (max-width: 460px){
+	.header{
+		background-size: cover !important;
+	}
+	.titulo h1{
+		font-size: 4rem;
+	}
+	.titulo p {
+		font-size: 1.1rem;
+	}
+	.btn{
+		width: 40%;
+	}
+	.who{
+		flex-direction: column;
+	}
+	.who-we-are{
+		width: 100%;
+		text-align-last: center;
+    	padding: 10px 0 10px 0;
+	}
+	.img {
+		width: 100%;
+		text-align-last: center;
+	}
+	.cinco{
+		padding: 0;
+	}
+	.who-we-are h2{
+		text-align: center;
+	}
+	.number{
+		width: 80%;
+	}
+	.number p{
+		font-size: 2rem;
+	}
+	.number p:nth-child(2) {
+    font-size: .7rem;
+	}
+	.areas{
+		padding-bottom: 0;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.green p{
+		font-size: .8rem;
+	}
+	.txt-form{
+		padding: 0;
+	}
+	.logo3 {
+    width: 100px !important;
+    padding-bottom: 20px;
+	}
+	.family{
+		margin: 0;
+	}
+	.author{
+		width: 100%;
+	}
+	.verified{
+		padding: 0;
+	}
 }
