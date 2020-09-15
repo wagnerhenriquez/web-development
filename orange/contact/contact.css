@@ -276,3 +276,31 @@ textarea{
     text-align: left;
     color: #a5a2a2;
 }
+
+/* medias */
+
+@media all and (max-width: 1024px) {
+	.who {
+		width: 80%;
+	}
+	.ready {
+		height: 30vh;
+	}
+	.ready h2 {
+		font-size: 2rem;
+	}
+	.ready span {
+		font-size: 4rem;
+	}
+}
+@media all and (max-width: 440px) {
+	.ready h2 {
+		font-size: 1.6rem;
+	}
+	.ready span {
+		font-size: 3rem;
+	}
+	.author {
+		width: auto;
+	}
+}

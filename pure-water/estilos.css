@@ -513,7 +513,6 @@ width: 10px;
 	background: #fff;
 	width: 100%;
 	position: relative;
-	padding-bottom: 100px;
 }
 .info-blog{
 	margin: 5% 0 0;
@@ -609,94 +608,9 @@ width: 10px;
 .categoria4{
 	margin-top: 50px;
 }
-.productos{
-	width: 100%;
-	background: url(img/boxed-water-is-better-zeffjZWOIIM-unsplash.jpg) no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	padding-bottom: 50px;
-	position: relative;
-}
-.skew3{
-	border-width: 0 0 35vh 100vw;
-    border-style: solid;
-    border-color: transparent transparent #fff transparent;
-	position: absolute;
-	left: 0;
-	bottom: -1px;
-}
-.titulo-productos{
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 200px;
-}
-.parrafo-item{
-	text-align: justify;
-	position: relative;
-	top: 200px;
-	padding: 20px 150px;
-}
-.botones-productos{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 20px;
-	position: relative;
-	top: 550px;
-	z-index: 1;
-}
-.botones-productos .boton{
-	width: 200px;
-	border: 1px solid darkorange;
-	padding: 20px;
-	color: darkorange;
-	font-weight: bold;
-}
-.botones-productos .boton:hover{
-	background: orange;
-	color: #fff;
-	transition: all 0.4s ease;
-}
-.botones-productos .boton:nth-child(2){
-	margin: 20px;
-}
-.info{
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	margin-top: 100px;
-	position: relative;
-	text-align: center;
-}
-.info .far{
-	font-size: 2rem;
-}
-.info .fas{
-	font-size: 2rem;
-}
-.experiencia a{
-	color: #888686;
-}
-.experiencia .dos{
-	font-size: 1.3rem;
-	font-weight: bold;
-	margin: 10px 0 10px 0;
-}
-.experiencia .tres{
-	margin: 10px 0 0 0;
-}
-.experiencia .cuatro{
-	margin: 10px 0 0 0;
-}
-.experiencia .cinco{
-	margin: 10px 0 0 0;
-}
+
 .coleccion{
 	position: relative;
-	padding-top: 100px;
 	background: #fff;
 }
 .titulo-coleccion{
@@ -792,10 +706,10 @@ width: 10px;
 	object-fit: cover;
 }
 .contacto{
+	background: #fff;
+	padding-bottom: 150px;
 	position: relative;
 	width: 100%;
-	height: 100vh;
-	background: #fff;
 }
 .form{
 	display: flex;

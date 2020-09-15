@@ -181,7 +181,7 @@ a{
 
 } */
 .header{
-    background: url(./img/bg-menu.jpg);
+    background: url(../img/bg-menu.jpg);
     background-position: center;
     background-size: cover;
     height: 85vh;

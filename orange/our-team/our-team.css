@@ -168,7 +168,7 @@ p{
 
 
 .header{
-    background: url(./img/team/team-bg.jpg) no-repeat;
+    background: url(../img/team/team-bg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -367,7 +367,7 @@ textarea{
 }
 /* end form */
 .family{
-	background: url(./img/team/team7.jpg);
+	background: url(../img/team/team7.jpg);
 	background-size: cover;
 	background-position: center;
 	width: 100%;

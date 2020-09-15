@@ -165,7 +165,7 @@ body{
 .title1 h1{
     font-size: 10rem;
     text-transform: uppercase;
-    background-image: url(./img/bg-h1.jpg);
+    background-image: url(../img/bg-h1.jpg);
     background-position: center;
     background-size: cover;
     -webkit-text-fill-color: transparent;
